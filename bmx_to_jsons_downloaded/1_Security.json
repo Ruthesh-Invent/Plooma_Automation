@@ -1,0 +1,27 @@
+{
+  "Security": {
+    "FinonUsers": [
+      {
+        "UserEmail": "prasad.j@botminds.ai",
+        "UserId": "4dade25c84e616bc7de38ac99e5e4799",
+        "FirstName": "Prasad",
+        "LastName": "J",
+        "RoleIds": [],
+        "IsSubscriptionAdmin": false,
+        "IsDeleted": false,
+        "IsInactive": false
+      },
+      {
+        "UserEmail": "raja.s@botminds.ai",
+        "UserId": "83f16584a978f6be40bd6f7498ccb0c4",
+        "FirstName": "Raja",
+        "LastName": "S",
+        "RoleIds": null,
+        "IsSubscriptionAdmin": true,
+        "IsDeleted": false,
+        "IsInactive": false
+      }
+    ],
+    "FinonRoles": []
+  }
+}

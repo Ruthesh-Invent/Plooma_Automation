@@ -1,0 +1,563 @@
+{
+  "Project": {
+    "Overview": {
+      "ProjectOverview": {
+        "FinonName": "VOC V25",
+        "Description": "Voice of customer with V25 solution",
+        "IsAnonymousAccessAllowed": false,
+        "EnableMultiStage": false,
+        "DisableTimeRangeFilterInDashboard": false,
+        "WorkingDayDefinition": null,
+        "DisableDiagnostics": false,
+        "EnableNotification": false,
+        "FreezeDashboardConfiguration": false,
+        "ShowUserName": false,
+        "DocumentUnitSize": 150,
+        "MaxDocumentUnitSize": 0,
+        "SubscriptionId": "160fcc8dd85b45db8c0ae8b96df54c99",
+        "SubscriptionName": "VOCTest",
+        "FinonId": "d3e43c251252c33ac57d18064ddfd31e",
+        "DashboardSettings": {
+          "ShowDashboardOptions": true,
+          "ShowExportDashboard": false
+        },
+        "NumberFormat": 1
+      },
+      "LandingPage": {
+        "DefaultLandingPage": "Dashboard",
+        "DefaultLandingPageView": "All Voices",
+        "DefaultLandingPageDashboardName": "",
+        "DefaultLandingPageDashboardId": "e660133039e6427eb40d5d36a9b60b50",
+        "DashboardNames": [
+          "Overview",
+          "CHI Dashboard",
+          "Source Details",
+          "Voice Insights"
+        ],
+        "LandingPageInfo": []
+      },
+      "UniversalTemplate": {
+        "IsActive": false,
+        "DisplayName": "VOC V25",
+        "Description": "Voice of customer with V25 solution",
+        "Link": ""
+      },
+      "ConceptSettings": {
+        "EntityName": null,
+        "TaxonomyName": "",
+        "LabelName": "",
+        "LookupName": ""
+      },
+      "IngestionSettings": {
+        "HideIngestionConfig": false,
+        "AllowParallelJobs": true,
+        "DynamicPriorityThreshold": null
+      }
+    },
+    "Appearance": {
+      "DocumentsPage": {
+        "DefaultSummaryPane": "",
+        "DocumentActions": [],
+        "HideSummary": false,
+        "EnableTrainingModeByDefault": false,
+        "EnableHighlightCopy": false,
+        "CustomSummaryPaneEnabled": false,
+        "FullDocumentFocusMode": true,
+        "SummaryTabViewEnabled": false,
+        "SwapSummaryAndDocumentPane": false,
+        "SwapWorkflowAndActionPane": false,
+        "UserScoreView": false,
+        "IsDocDeletionReasonEnabled": false,
+        "RemoveExtensions": false,
+        "DocumentCompletionLock": false,
+        "AllowSingleUserForAccessDocument": false,
+        "DocumentHeaderTemplateFilters": [
+          {
+            "Id": "9042c54792472912deacceb2a45b5b21",
+            "Name": "Voice Details Page",
+            "TemplateRendering": "<!DOCTYPE html>\r\n<html id=\"voice-detail-header\">\r\n  <head>\r\n    <style>\r\n      .title-icon {\r\n        display: flex;\r\n        width: 40px;\r\n        height: 40px;\r\n        padding: 10px;\r\n        border-radius: 8px;\r\n        border: 0px solid #e3e8ef;\r\n        background: #f8fafc;\r\n      }\r\n    </style>\r\n  </head>\r\n  <body>\r\n    <div class=\"w-full h-full flex items-center justify-center gap-4\">\r\n      <div id=\"sourceId-<<Voice ID(336772d61b8d4cb8b448da08e117dad3-43437294c98cb8be4b485fc33161a4b8)>>\" class=\"hidden\"><<Data Source(336772d61b8d4cb8b448da08e117dad3-f31bbdd1b3e85bccd652680e16935819)>></div>\r\n      <div\r\n        id=\"source_IconId-<<Voice ID(336772d61b8d4cb8b448da08e117dad3-43437294c98cb8be4b485fc33161a4b8)>>\"\r\n        class=\"flex flex-col justify-center items-center\"\r\n      >\r\n        <span id=\"source_SVGIconId\" class=\"flex\"></span>\r\n      </div>\r\n      <div class=\"w-full h-full flex flex-col gap-1 truncate justify-center\">\r\n        <span class=\"text-lg font-bold\"><<Title(336772d61b8d4cb8b448da08e117dad3-b78a3223503896721cca1303f776159b)>></span>\r\n        <div class=\"text-sm flex gap-2\" style=\"color: #4a5567\">\r\n          <span>ID</span>\r\n          <span><<Voice ID(336772d61b8d4cb8b448da08e117dad3-43437294c98cb8be4b485fc33161a4b8)>></span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <script bot-script>\r\n         function setTitleIcon(){\r\n    let sourceElement = document.getElementById(\"sourceId-<<Voice ID(336772d61b8d4cb8b448da08e117dad3-43437294c98cb8be4b485fc33161a4b8)>>\");\r\n  let iconElement = document.getElementById(\"source_IconId-<<Voice ID(336772d61b8d4cb8b448da08e117dad3-43437294c98cb8be4b485fc33161a4b8)>>\");\r\n  if (!sourceElement || !iconElement) {\r\n    console.error(\"Required elements not found.\");\r\n    return;\r\n  }\r\n  let sourceValue = sourceElement.innerText?.trim()?.toLowerCase();\r\n  let icons = {\r\n    default: `<svg width=\"40\" height=\"40\" viewBox=\"0 0 58 58\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.636719\" y=\"0.636475\" width=\"56.7273\" height=\"56.7273\" rx=\"9.45455\" fill=\"#F0F2F5\"/><circle cx=\"24.6989\" cy=\"34.5312\" r=\"9.24182\" fill=\"#F0F2F5\" stroke=\"black\" stroke-width=\"1.18182\"/><circle cx=\"21.6422\" cy=\"31.737\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><circle cx=\"27.4196\" cy=\"31.737\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><mask id=\"path-5-inside-1_2_5245\" fill=\"white\"><path d=\"M29.0693 35.939C29.0693 36.9141 28.6089 37.8493 27.7893 38.5388C26.9698 39.2283 25.8582 39.6157 24.6992 39.6157C23.5402 39.6157 22.4286 39.2284 21.6091 38.5388C20.7895 37.8493 20.3291 36.9141 20.3291 35.939L24.6992 35.939H29.0693Z\"/></mask><path d=\"M29.0693 35.939C29.0693 36.9141 28.6089 37.8493 27.7893 38.5388C26.9698 39.2283 25.8582 39.6157 24.6992 39.6157C23.5402 39.6157 22.4286 39.2284 21.6091 38.5388C20.7895 37.8493 20.3291 36.9141 20.3291 35.939L24.6992 35.939H29.0693Z\" stroke=\"black\" stroke-width=\"2.36364\" mask=\"url(#path-5-inside-1_2_5245)\"/><circle cx=\"33.3025\" cy=\"23.4697\" r=\"9.24182\" fill=\"#F0F2F5\" stroke=\"black\" stroke-width=\"1.18182\"/><circle cx=\"30.2457\" cy=\"20.6759\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><circle cx=\"36.0231\" cy=\"20.6757\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><mask id=\"path-9-inside-2_2_5245\" fill=\"white\"><path d=\"M37.6728 24.8777C37.6728 25.8528 37.2124 26.788 36.3928 27.4775C35.5733 28.1671 34.4617 28.5544 33.3027 28.5544C32.1437 28.5544 31.0321 28.1671 30.2126 27.4775C29.393 26.788 28.9326 25.8528 28.9326 24.8777L33.3027 24.8777H37.6728Z\"/></mask><path d=\"M37.6728 24.8777C37.6728 25.8528 37.2124 26.788 36.3928 27.4775C35.5733 28.1671 34.4617 28.5544 33.3027 28.5544C32.1437 28.5544 31.0321 28.1671 30.2126 27.4775C29.393 26.788 28.9326 25.8528 28.9326 24.8777L33.3027 24.8777H37.6728Z\" stroke=\"black\" stroke-width=\"2.36364\" mask=\"url(#path-9-inside-2_2_5245)\"/></svg>`,\r\n    'customer care center - outbound feedback calls': `<div class=\"title-icon\">\r\n      <svg width=\"20\" height=\"21\" viewBox=\"0 0 20 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M11.2711 4.08861C11.2923 4.00929 11.329 3.93493 11.3789 3.86978C11.4289 3.80462 11.4912 3.74995 11.5623 3.70889C11.6334 3.66782 11.7119 3.64117 11.7933 3.63045C11.8747 3.61973 11.9574 3.62516 12.0367 3.64642C13.1954 3.94873 14.2525 4.55443 15.0992 5.40114C15.9459 6.24785 16.5516 7.30497 16.8539 8.46361C16.8752 8.54292 16.8806 8.62564 16.8699 8.70704C16.8592 8.78845 16.8325 8.86694 16.7915 8.93804C16.7504 9.00914 16.6957 9.07146 16.6306 9.12142C16.5654 9.17138 16.491 9.20802 16.4117 9.22924C16.3589 9.2431 16.3046 9.25019 16.25 9.25033C16.1124 9.25037 15.9786 9.20499 15.8694 9.12122C15.7602 9.03745 15.6817 8.91999 15.6461 8.78705C15.3997 7.84106 14.9054 6.97792 14.2142 6.28661C13.5231 5.59531 12.66 5.10086 11.7141 4.85424C11.6347 4.8331 11.5602 4.79653 11.495 4.7466C11.4298 4.69667 11.375 4.63437 11.3339 4.56326C11.2927 4.49215 11.266 4.41363 11.2552 4.33218C11.2445 4.25074 11.2499 4.16797 11.2711 4.08861ZM11.0891 7.35424C12.1664 7.64174 12.8586 8.33471 13.1461 9.41205C13.1817 9.54499 13.2602 9.66245 13.3694 9.74622C13.4786 9.82999 13.6124 9.87537 13.75 9.87533C13.8046 9.87519 13.8589 9.8681 13.9117 9.85424C13.991 9.83302 14.0654 9.79638 14.1306 9.74642C14.1957 9.69646 14.2504 9.63414 14.2915 9.56304C14.3325 9.49194 14.3592 9.41345 14.3699 9.33204C14.3806 9.25064 14.3752 9.16792 14.3539 9.08861C13.9539 7.59174 12.9086 6.54642 11.4117 6.14642C11.2516 6.10364 11.081 6.12623 10.9374 6.20923C10.7939 6.29223 10.6893 6.42884 10.6465 6.589C10.6037 6.74917 10.6263 6.91977 10.7093 7.06328C10.7923 7.20679 10.9289 7.31145 11.0891 7.35424ZM16.7477 13.505L13.0672 11.8558L13.057 11.8511C12.866 11.7694 12.6575 11.7366 12.4506 11.7557C12.2437 11.7748 12.0448 11.8452 11.8719 11.9605C11.8515 11.9739 11.832 11.9885 11.8133 12.0042L9.91173 13.6253C8.70704 13.0402 7.46329 11.8058 6.87813 10.6167L8.50157 8.68627C8.51719 8.66674 8.53204 8.64721 8.5461 8.62611C8.65894 8.45369 8.72739 8.25605 8.74539 8.05078C8.76338 7.84551 8.73034 7.63897 8.64923 7.44955V7.44017L6.99532 3.75346C6.88809 3.50601 6.7037 3.29987 6.46968 3.16583C6.23567 3.03178 5.96458 2.97702 5.69688 3.00971C4.63826 3.14901 3.66655 3.6689 2.96324 4.47228C2.25992 5.27566 1.87309 6.30759 1.87501 7.37533C1.87501 13.5785 6.92188 18.6253 13.125 18.6253C14.1927 18.6272 15.2247 18.2404 16.0281 17.5371C16.8314 16.8338 17.3513 15.8621 17.4906 14.8035C17.5234 14.5358 17.4687 14.2648 17.3348 14.0308C17.2009 13.7968 16.995 13.6124 16.7477 13.505Z\" fill=\"#4A5567\"/>\r\n</svg>\r\n    </div>`,\r\n    'live calls to ccc':`<div class=\"title-icon\">\r\n      <svg width=\"20\" height=\"21\" viewBox=\"0 0 20 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M11.2711 4.08861C11.2923 4.00929 11.329 3.93493 11.3789 3.86978C11.4289 3.80462 11.4912 3.74995 11.5623 3.70889C11.6334 3.66782 11.7119 3.64117 11.7933 3.63045C11.8747 3.61973 11.9574 3.62516 12.0367 3.64642C13.1954 3.94873 14.2525 4.55443 15.0992 5.40114C15.9459 6.24785 16.5516 7.30497 16.8539 8.46361C16.8752 8.54292 16.8806 8.62564 16.8699 8.70704C16.8592 8.78845 16.8325 8.86694 16.7915 8.93804C16.7504 9.00914 16.6957 9.07146 16.6306 9.12142C16.5654 9.17138 16.491 9.20802 16.4117 9.22924C16.3589 9.2431 16.3046 9.25019 16.25 9.25033C16.1124 9.25037 15.9786 9.20499 15.8694 9.12122C15.7602 9.03745 15.6817 8.91999 15.6461 8.78705C15.3997 7.84106 14.9054 6.97792 14.2142 6.28661C13.5231 5.59531 12.66 5.10086 11.7141 4.85424C11.6347 4.8331 11.5602 4.79653 11.495 4.7466C11.4298 4.69667 11.375 4.63437 11.3339 4.56326C11.2927 4.49215 11.266 4.41363 11.2552 4.33218C11.2445 4.25074 11.2499 4.16797 11.2711 4.08861ZM11.0891 7.35424C12.1664 7.64174 12.8586 8.33471 13.1461 9.41205C13.1817 9.54499 13.2602 9.66245 13.3694 9.74622C13.4786 9.82999 13.6124 9.87537 13.75 9.87533C13.8046 9.87519 13.8589 9.8681 13.9117 9.85424C13.991 9.83302 14.0654 9.79638 14.1306 9.74642C14.1957 9.69646 14.2504 9.63414 14.2915 9.56304C14.3325 9.49194 14.3592 9.41345 14.3699 9.33204C14.3806 9.25064 14.3752 9.16792 14.3539 9.08861C13.9539 7.59174 12.9086 6.54642 11.4117 6.14642C11.2516 6.10364 11.081 6.12623 10.9374 6.20923C10.7939 6.29223 10.6893 6.42884 10.6465 6.589C10.6037 6.74917 10.6263 6.91977 10.7093 7.06328C10.7923 7.20679 10.9289 7.31145 11.0891 7.35424ZM16.7477 13.505L13.0672 11.8558L13.057 11.8511C12.866 11.7694 12.6575 11.7366 12.4506 11.7557C12.2437 11.7748 12.0448 11.8452 11.8719 11.9605C11.8515 11.9739 11.832 11.9885 11.8133 12.0042L9.91173 13.6253C8.70704 13.0402 7.46329 11.8058 6.87813 10.6167L8.50157 8.68627C8.51719 8.66674 8.53204 8.64721 8.5461 8.62611C8.65894 8.45369 8.72739 8.25605 8.74539 8.05078C8.76338 7.84551 8.73034 7.63897 8.64923 7.44955V7.44017L6.99532 3.75346C6.88809 3.50601 6.7037 3.29987 6.46968 3.16583C6.23567 3.03178 5.96458 2.97702 5.69688 3.00971C4.63826 3.14901 3.66655 3.6689 2.96324 4.47228C2.25992 5.27566 1.87309 6.30759 1.87501 7.37533C1.87501 13.5785 6.92188 18.6253 13.125 18.6253C14.1927 18.6272 15.2247 18.2404 16.0281 17.5371C16.8314 16.8338 17.3513 15.8621 17.4906 14.8035C17.5234 14.5358 17.4687 14.2648 17.3348 14.0308C17.2009 13.7968 16.995 13.6124 16.7477 13.505Z\" fill=\"#4A5567\"/>\r\n</svg>\r\n    </div>`,\r\n    'live emails to ccc':`<div class=\"title-icon\">\r\n    <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M17.5 3.75H2.5C2.33424 3.75 2.17527 3.81585 2.05806 3.93306C1.94085 4.05027 1.875 4.20924 1.875 4.375V15C1.875 15.3315 2.0067 15.6495 2.24112 15.8839C2.47554 16.1183 2.79348 16.25 3.125 16.25H16.875C17.2065 16.25 17.5245 16.1183 17.7589 15.8839C17.9933 15.6495 18.125 15.3315 18.125 15V4.375C18.125 4.20924 18.0592 4.05027 17.9419 3.93306C17.8247 3.81585 17.6658 3.75 17.5 3.75ZM7.71172 10L3.125 14.2039V5.79609L7.71172 10ZM8.63672 10.8477L9.57422 11.7109C9.68953 11.8168 9.84035 11.8755 9.99687 11.8755C10.1534 11.8755 10.3042 11.8168 10.4195 11.7109L11.357 10.8477L15.8883 15H4.10703L8.63672 10.8477ZM12.2883 10L16.875 5.79531V14.2047L12.2883 10Z\" fill=\"#4A5567\"/>\r\n</svg></div>`,\r\n    'live emails to ccc - outbound feedback calls':`<div class=\"title-icon\">\r\n    <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M17.5 3.75H2.5C2.33424 3.75 2.17527 3.81585 2.05806 3.93306C1.94085 4.05027 1.875 4.20924 1.875 4.375V15C1.875 15.3315 2.0067 15.6495 2.24112 15.8839C2.47554 16.1183 2.79348 16.25 3.125 16.25H16.875C17.2065 16.25 17.5245 16.1183 17.7589 15.8839C17.9933 15.6495 18.125 15.3315 18.125 15V4.375C18.125 4.20924 18.0592 4.05027 17.9419 3.93306C17.8247 3.81585 17.6658 3.75 17.5 3.75ZM7.71172 10L3.125 14.2039V5.79609L7.71172 10ZM8.63672 10.8477L9.57422 11.7109C9.68953 11.8168 9.84035 11.8755 9.99687 11.8755C10.1534 11.8755 10.3042 11.8168 10.4195 11.7109L11.357 10.8477L15.8883 15H4.10703L8.63672 10.8477ZM12.2883 10L16.875 5.79531V14.2047L12.2883 10Z\" fill=\"#4A5567\"/>\r\n</svg></div>`,\r\n    'rammas for you':`<div class=\"title-icon\">\r\n      <svg width=\"20\" height=\"21\" viewBox=\"0 0 20 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M10 2.375C8.39303 2.375 6.82214 2.85152 5.486 3.74431C4.14985 4.6371 3.10844 5.90605 2.49348 7.3907C1.87852 8.87535 1.71762 10.509 2.03112 12.0851C2.34463 13.6612 3.11846 15.1089 4.25476 16.2452C5.39106 17.3815 6.8388 18.1554 8.4149 18.4689C9.99099 18.7824 11.6247 18.6215 13.1093 18.0065C14.594 17.3916 15.8629 16.3502 16.7557 15.014C17.6485 13.6779 18.125 12.107 18.125 10.5C18.1225 8.34588 17.2657 6.28069 15.7425 4.7575C14.2193 3.2343 12.1541 2.37748 10 2.375ZM16.1219 7.375H13.3367C12.986 6.08821 12.3948 4.87943 11.5945 3.8125C12.5615 4.04479 13.4668 4.48342 14.2484 5.09832C15.03 5.71323 15.6693 6.48987 16.1227 7.375H16.1219ZM16.875 10.5C16.8755 11.134 16.788 11.7651 16.6148 12.375H13.6063C13.7979 11.1323 13.7979 9.86765 13.6063 8.625H16.6148C16.788 9.23493 16.8755 9.86597 16.875 10.5ZM10 3.85938C10.9359 4.86134 11.6306 6.06378 12.0313 7.375H7.96875C8.36898 6.0636 9.06377 4.86108 10 3.85938ZM7.96875 13.625H12.0313C11.631 14.9364 10.9362 16.1389 10 17.1406C9.06413 16.1387 8.36939 14.9362 7.96875 13.625ZM7.66407 12.375C7.44949 11.1342 7.44949 9.86579 7.66407 8.625H12.3422C12.5568 9.86579 12.5568 11.1342 12.3422 12.375H7.66407ZM11.5977 17.1875C12.398 16.1206 12.9891 14.9118 13.3398 13.625H16.1258C15.6721 14.5105 15.0323 15.2873 14.2501 15.9022C13.468 16.5172 12.5621 16.9556 11.5945 17.1875H11.5977Z\" fill=\"#4A5567\"/>\r\n</svg></div>`,\r\n  };\r\n  iconElement.innerHTML = icons[sourceValue] || icons.default;\r\n    }\r\n    setTitleIcon();\r\n    </script>\r\n  </body>\r\n</html>\r\n",
+            "Description": null,
+            "LabelFilters": [
+              {
+                "LearnerId": "336772d61b8d4cb8b448da08e117dad3",
+                "LabelId": "43437294c98cb8be4b485fc33161a4b8",
+                "Status": [],
+                "Value": "",
+                "Gate": 0,
+                "StartDate": null,
+                "EndDate": null,
+                "LabelFilterOperator": 10,
+                "IncludeChildLabels": false,
+                "IsLookupLabel": false,
+                "IsRecordLabel": false,
+                "Values": null,
+                "Boost": null,
+                "MappedOtherLearnerId": null,
+                "MappedOtherLabelId": null,
+                "MappedValues": null,
+                "UseFileForValues": false,
+                "FileUrl": null
+              }
+            ]
+          },
+          {
+            "Id": "309cde54e94afe2174a424e383439d64",
+            "Name": "Customer Detail Page",
+            "TemplateRendering": "<div class=\"w-full h-full flex items-center justify-center gap-4\">\r\n<div class=\"w-20 h-16 rounded justify-center items-center inline-flex\" style=\"background: #eff2f4\">\r\n    <svg width=\"44\" height=\"44\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<g id=\"fluent:person-28-regular\">\r\n<path id=\"Vector\" d=\"M25.6129 19.7207C26.5506 19.7207 27.4499 20.0932 28.113 20.7563C28.7761 21.4194 29.1486 22.3187 29.1486 23.2564V24.0991C29.1486 28.3148 24.1868 31.5064 17.3629 31.5064C10.5389 31.5064 5.57715 28.481 5.57715 24.0991V23.2564C5.57715 22.3187 5.94966 21.4194 6.61274 20.7563C7.27581 20.0932 8.17513 19.7207 9.11286 19.7207H25.6129ZM25.6129 21.4886H9.11286C8.67358 21.4886 8.25003 21.6521 7.92474 21.9473C7.59945 22.2425 7.39572 22.6483 7.35326 23.0855L7.34501 23.2564V24.0991C7.34501 27.2506 11.3392 29.7386 17.3629 29.7386C23.1685 29.7386 27.2098 27.2577 27.376 24.2888L27.3807 24.0991V23.2564C27.3807 22.8171 27.2172 22.3936 26.922 22.0683C26.6267 21.743 26.221 21.5393 25.7838 21.4968L25.6129 21.4886ZM17.3629 3.2207C18.2915 3.2207 19.211 3.40361 20.069 3.75898C20.9269 4.11436 21.7065 4.63523 22.3631 5.29188C23.0198 5.94852 23.5406 6.72807 23.896 7.58601C24.2514 8.44396 24.4343 9.3635 24.4343 10.2921C24.4343 11.2208 24.2514 12.1403 23.896 12.9983C23.5406 13.8562 23.0198 14.6357 22.3631 15.2924C21.7065 15.949 20.9269 16.4699 20.069 16.8253C19.211 17.1807 18.2915 17.3636 17.3629 17.3636C15.4874 17.3636 13.6888 16.6185 12.3626 15.2924C11.0365 13.9662 10.2914 12.1676 10.2914 10.2921C10.2914 8.41667 11.0365 6.61803 12.3626 5.29188C13.6888 3.96573 15.4874 3.2207 17.3629 3.2207ZM17.3629 4.98856C15.9563 4.98856 14.6073 5.54733 13.6127 6.54194C12.6181 7.53655 12.0593 8.88554 12.0593 10.2921C12.0593 11.6987 12.6181 13.0477 13.6127 14.0423C14.6073 15.0369 15.9563 15.5957 17.3629 15.5957C18.7695 15.5957 20.1184 15.0369 21.1131 14.0423C22.1077 13.0477 22.6664 11.6987 22.6664 10.2921C22.6664 8.88554 22.1077 7.53655 21.1131 6.54194C20.1184 5.54733 18.7695 4.98856 17.3629 4.98856Z\" fill=\"black\"/>\r\n</g>\r\n</svg>\r\n\r\n</div>\r\n    <div class=\"w-full h-full flex flex-col gap-1 truncate justify-center\">\r\n        <span class=\"text-lg font-bold\"><<FirstName(573834c23c974cb185878bd873d47b99-5289f5adeb527a6ea2a14a3f892416c2)>><<LastName (573834c23c974cb185878bd873d47b99-539c5300bf48f8a3e3009ce33d49a240)>></span>\r\n        <div class=\"text-sm flex gap-2\" style=\"color: #4a5567\">\r\n            <span>ID:</span>\r\n            <span><<Customer ID(573834c23c974cb185878bd873d47b99-d37c2bf1bd3143847fca087b354f920e)>></span>\r\n        </div>\r\n    </div>\r\n</div>",
+            "Description": null,
+            "LabelFilters": [
+              {
+                "LearnerId": "573834c23c974cb185878bd873d47b99",
+                "LabelId": "d37c2bf1bd3143847fca087b354f920e",
+                "Status": [],
+                "Value": "",
+                "Gate": 0,
+                "StartDate": null,
+                "EndDate": null,
+                "LabelFilterOperator": 10,
+                "IncludeChildLabels": false,
+                "IsLookupLabel": false,
+                "IsRecordLabel": false,
+                "Values": null,
+                "Boost": null,
+                "MappedOtherLearnerId": null,
+                "MappedOtherLabelId": null,
+                "MappedValues": null,
+                "UseFileForValues": false,
+                "FileUrl": null
+              }
+            ]
+          },
+          {
+            "Id": "004c53c91d4aa8bce1f10092476f4e89",
+            "Name": "Challenge Detail Page",
+            "TemplateRendering": "<!DOCTYPE html>\r\n<html id=\"voice-detail-header\">\r\n  <head>\r\n    <style>\r\n      .test {\r\n        display: flex;\r\n        width: 40px;\r\n        height: 40px;\r\n        padding: 10px;\r\n        border-radius: 8px;\r\n        border: 0px solid #e3e8ef;\r\n        background: #f8fafc;\r\n      }\r\n    </style>\r\n  </head>\r\n  <body>\r\n    <div class=\"w-full h-full flex items-center justify-center gap-4\">\r\n      <div id=\"sourceId\" class=\"hidden\">default</div>\r\n      <div\r\n        id=\"source_IconId\"\r\n        class=\"source-icon flex flex-col justify-center items-center test\"\r\n      >\r\n        <span id=\"source_SVGIconId\" class=\"flex\"></span>\r\n      </div>\r\n      <div class=\"w-full h-full flex flex-col gap-1 truncate justify-center\">\r\n        <span class=\"text-lg font-bold\"><<Problem(bd9eabcdb6c14588a19dd4e026ece5c4-df0f20d62dc4ba9c471fdeef6751ec5f)>></span>\r\n        <div class=\"text-sm flex gap-2\" style=\"color: #4a5567\">\r\n          <span>ID:</span>\r\n          <span><<Challenge ID(965146147d144ea6a01632a0f2a527fe-0f69653a9933fe2f6742aad2369d670d)>></span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <script bot-script>\r\n        function execute() {\r\n  let sourceElement = document.getElementById(\"sourceId\");\r\n  let iconElement = document.getElementById(\"source_SVGIconId\");\r\n  if (!sourceElement || !iconElement) {\r\n    console.error(\"Required elements not found.\");\r\n    return;\r\n  }\r\n  let sourceValue = sourceElement.innerText?.trim()?.toLowerCase();\r\n  let icons = {\r\n    default: `<svg width=\"44\" height=\"44\" viewBox=\"0 0 58 58\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.636719\" y=\"0.636475\" width=\"56.7273\" height=\"56.7273\" rx=\"9.45455\" fill=\"#F0F2F5\"/><circle cx=\"24.6989\" cy=\"34.5312\" r=\"9.24182\" fill=\"#F0F2F5\" stroke=\"black\" stroke-width=\"1.18182\"/><circle cx=\"21.6422\" cy=\"31.737\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><circle cx=\"27.4196\" cy=\"31.737\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><mask id=\"path-5-inside-1_2_5245\" fill=\"white\"><path d=\"M29.0693 35.939C29.0693 36.9141 28.6089 37.8493 27.7893 38.5388C26.9698 39.2283 25.8582 39.6157 24.6992 39.6157C23.5402 39.6157 22.4286 39.2284 21.6091 38.5388C20.7895 37.8493 20.3291 36.9141 20.3291 35.939L24.6992 35.939H29.0693Z\"/></mask><path d=\"M29.0693 35.939C29.0693 36.9141 28.6089 37.8493 27.7893 38.5388C26.9698 39.2283 25.8582 39.6157 24.6992 39.6157C23.5402 39.6157 22.4286 39.2284 21.6091 38.5388C20.7895 37.8493 20.3291 36.9141 20.3291 35.939L24.6992 35.939H29.0693Z\" stroke=\"black\" stroke-width=\"2.36364\" mask=\"url(#path-5-inside-1_2_5245)\"/><circle cx=\"33.3025\" cy=\"23.4697\" r=\"9.24182\" fill=\"#F0F2F5\" stroke=\"black\" stroke-width=\"1.18182\"/><circle cx=\"30.2457\" cy=\"20.6759\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><circle cx=\"36.0231\" cy=\"20.6757\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><mask id=\"path-9-inside-2_2_5245\" fill=\"white\"><path d=\"M37.6728 24.8777C37.6728 25.8528 37.2124 26.788 36.3928 27.4775C35.5733 28.1671 34.4617 28.5544 33.3027 28.5544C32.1437 28.5544 31.0321 28.1671 30.2126 27.4775C29.393 26.788 28.9326 25.8528 28.9326 24.8777L33.3027 24.8777H37.6728Z\"/></mask><path d=\"M37.6728 24.8777C37.6728 25.8528 37.2124 26.788 36.3928 27.4775C35.5733 28.1671 34.4617 28.5544 33.3027 28.5544C32.1437 28.5544 31.0321 28.1671 30.2126 27.4775C29.393 26.788 28.9326 25.8528 28.9326 24.8777L33.3027 24.8777H37.6728Z\" stroke=\"black\" stroke-width=\"2.36364\" mask=\"url(#path-9-inside-2_2_5245)\"/></svg>`,\r\n    dewa: `<svg width=\"44\" height=\"44\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g id=\"Globe\"><path id=\"Vector\" d=\"M10 1.875C8.39303 1.875 6.82214 2.35152 5.486 3.24431C4.14985 4.1371 3.10844 5.40605 2.49348 6.8907C1.87852 8.37535 1.71762 10.009 2.03112 11.5851C2.34463 13.1612 3.11846 14.6089 4.25476 15.7452C5.39106 16.8815 6.8388 17.6554 8.4149 17.9689C9.99099 18.2824 11.6247 18.1215 13.1093 17.5065C14.594 16.8916 15.8629 15.8502 16.7557 14.514C17.6485 13.1779 18.125 11.607 18.125 10C18.1225 7.84588 17.2657 5.78069 15.7425 4.2575C14.2193 2.7343 12.1541 1.87748 10 1.875Z\" fill=\"#4A5567\"/></g></svg>`,\r\n  };\r\n  iconElement.innerHTML = icons[sourceValue] || icons.default;\r\n}\r\nexecute();\r\n    </script>\r\n  </body>\r\n</html>\r\n",
+            "Description": null,
+            "LabelFilters": [
+              {
+                "LearnerId": "965146147d144ea6a01632a0f2a527fe",
+                "LabelId": "0f69653a9933fe2f6742aad2369d670d",
+                "Status": [],
+                "Value": "",
+                "Gate": 0,
+                "StartDate": null,
+                "EndDate": null,
+                "LabelFilterOperator": 10,
+                "IncludeChildLabels": false,
+                "IsLookupLabel": false,
+                "IsRecordLabel": false,
+                "Values": null,
+                "Boost": null,
+                "MappedOtherLearnerId": null,
+                "MappedOtherLabelId": null,
+                "MappedValues": null,
+                "UseFileForValues": false,
+                "FileUrl": null
+              }
+            ]
+          },
+          {
+            "Id": "7f3601a21c79e4299e16a80d445feda2",
+            "Name": "AI Recommendation Detail Page",
+            "TemplateRendering": "<!DOCTYPE html>\r\n<html id=\"voice-detail-header\">\r\n  <head>\r\n    <style>\r\n      .test {\r\n        display: flex;\r\n        width: 40px;\r\n        height: 40px;\r\n        padding: 10px;\r\n        border-radius: 8px;\r\n        border: 0px solid #e3e8ef;\r\n        background: #f8fafc;\r\n      }\r\n    </style>\r\n  </head>\r\n  <body>\r\n    <div class=\"w-full h-full flex items-center justify-center gap-4\">\r\n      <div id=\"sourceId\" class=\"hidden\">default</div>\r\n      <div\r\n        id=\"source_IconId\"\r\n        class=\"source-icon flex flex-col justify-center items-center test\"\r\n      >\r\n        <span id=\"source_SVGIconId\" class=\"flex\"></span>\r\n      </div>\r\n      <div class=\"w-full h-full flex flex-col gap-1 truncate justify-center\">\r\n        <span class=\"text-lg font-bold\"><<Recommendation Title(965146147d144ea6a01632a0f2a527fe-d726129e1f257ff1c1dda0fb5e7c6122)>></span>\r\n        <div class=\"text-sm flex gap-2\" style=\"color: #4a5567\">\r\n          <span>ID:</span>\r\n          <span><<Recommendation ID(965146147d144ea6a01632a0f2a527fe-3a7225596aee4d7f0badcde9661c85ca)>> </span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <script bot-script>\r\n        function execute() {\r\n  let sourceElement = document.getElementById(\"sourceId\");\r\n  let iconElement = document.getElementById(\"source_SVGIconId\");\r\n  if (!sourceElement || !iconElement) {\r\n    console.error(\"Required elements not found.\");\r\n    return;\r\n  }\r\n  let sourceValue = sourceElement.innerText?.trim()?.toLowerCase();\r\n  let icons = {\r\n    default: `<svg width=\"44\" height=\"44\" viewBox=\"0 0 58 58\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.636719\" y=\"0.636475\" width=\"56.7273\" height=\"56.7273\" rx=\"9.45455\" fill=\"#F0F2F5\"/><circle cx=\"24.6989\" cy=\"34.5312\" r=\"9.24182\" fill=\"#F0F2F5\" stroke=\"black\" stroke-width=\"1.18182\"/><circle cx=\"21.6422\" cy=\"31.737\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><circle cx=\"27.4196\" cy=\"31.737\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><mask id=\"path-5-inside-1_2_5245\" fill=\"white\"><path d=\"M29.0693 35.939C29.0693 36.9141 28.6089 37.8493 27.7893 38.5388C26.9698 39.2283 25.8582 39.6157 24.6992 39.6157C23.5402 39.6157 22.4286 39.2284 21.6091 38.5388C20.7895 37.8493 20.3291 36.9141 20.3291 35.939L24.6992 35.939H29.0693Z\"/></mask><path d=\"M29.0693 35.939C29.0693 36.9141 28.6089 37.8493 27.7893 38.5388C26.9698 39.2283 25.8582 39.6157 24.6992 39.6157C23.5402 39.6157 22.4286 39.2284 21.6091 38.5388C20.7895 37.8493 20.3291 36.9141 20.3291 35.939L24.6992 35.939H29.0693Z\" stroke=\"black\" stroke-width=\"2.36364\" mask=\"url(#path-5-inside-1_2_5245)\"/><circle cx=\"33.3025\" cy=\"23.4697\" r=\"9.24182\" fill=\"#F0F2F5\" stroke=\"black\" stroke-width=\"1.18182\"/><circle cx=\"30.2457\" cy=\"20.6759\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><circle cx=\"36.0231\" cy=\"20.6757\" r=\"0.958586\" stroke=\"black\" stroke-width=\"0.709091\"/><mask id=\"path-9-inside-2_2_5245\" fill=\"white\"><path d=\"M37.6728 24.8777C37.6728 25.8528 37.2124 26.788 36.3928 27.4775C35.5733 28.1671 34.4617 28.5544 33.3027 28.5544C32.1437 28.5544 31.0321 28.1671 30.2126 27.4775C29.393 26.788 28.9326 25.8528 28.9326 24.8777L33.3027 24.8777H37.6728Z\"/></mask><path d=\"M37.6728 24.8777C37.6728 25.8528 37.2124 26.788 36.3928 27.4775C35.5733 28.1671 34.4617 28.5544 33.3027 28.5544C32.1437 28.5544 31.0321 28.1671 30.2126 27.4775C29.393 26.788 28.9326 25.8528 28.9326 24.8777L33.3027 24.8777H37.6728Z\" stroke=\"black\" stroke-width=\"2.36364\" mask=\"url(#path-9-inside-2_2_5245)\"/></svg>`,\r\n    dewa: `<svg width=\"44\" height=\"44\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g id=\"Globe\"><path id=\"Vector\" d=\"M10 1.875C8.39303 1.875 6.82214 2.35152 5.486 3.24431C4.14985 4.1371 3.10844 5.40605 2.49348 6.8907C1.87852 8.37535 1.71762 10.009 2.03112 11.5851C2.34463 13.1612 3.11846 14.6089 4.25476 15.7452C5.39106 16.8815 6.8388 17.6554 8.4149 17.9689C9.99099 18.2824 11.6247 18.1215 13.1093 17.5065C14.594 16.8916 15.8629 15.8502 16.7557 14.514C17.6485 13.1779 18.125 11.607 18.125 10C18.1225 7.84588 17.2657 5.78069 15.7425 4.2575C14.2193 2.7343 12.1541 1.87748 10 1.875Z\" fill=\"#4A5567\"/></g></svg>`,\r\n  };\r\n  iconElement.innerHTML = icons[sourceValue] || icons.default;\r\n}\r\nexecute();\r\n    </script>\r\n  </body>\r\n</html>\r\n",
+            "Description": null,
+            "LabelFilters": [
+              {
+                "LearnerId": "965146147d144ea6a01632a0f2a527fe",
+                "LabelId": "3a7225596aee4d7f0badcde9661c85ca",
+                "Status": [],
+                "Value": "",
+                "Gate": 0,
+                "StartDate": null,
+                "EndDate": null,
+                "LabelFilterOperator": 10,
+                "IncludeChildLabels": false,
+                "IsLookupLabel": false,
+                "IsRecordLabel": false,
+                "Values": null,
+                "Boost": null,
+                "MappedOtherLearnerId": null,
+                "MappedOtherLabelId": null,
+                "MappedValues": null,
+                "UseFileForValues": false,
+                "FileUrl": null
+              }
+            ]
+          }
+        ]
+      },
+      "NavigationMenu": {
+        "DisableDashBoard": false,
+        "EnabledSidebarMenu": true,
+        "DisableEntity": false,
+        "DisableDashBoardOverview": true,
+        "DisableChat": true,
+        "DisableSearch": false,
+        "DisableStudio": true,
+        "IsWhiteNavBar": true,
+        "IsShareLinkEnabled": true,
+        "NavigationMenu": [
+          {
+            "Name": "Dashboard",
+            "DisplayName": "Dashboard",
+            "Hide": false,
+            "Id": "Dashboard",
+            "Icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkNvbXBhc3MiPgo8cGF0aCBpZD0iVmVjdG9yIiBkPSJNOSAxLjY4NzVDNy41NTM3MyAxLjY4NzUgNi4xMzk5MyAyLjExNjM3IDQuOTM3NCAyLjkxOTg4QzMuNzM0ODYgMy43MjMzOSAyLjc5NzYgNC44NjU0NCAyLjI0NDEzIDYuMjAxNjNDMS42OTA2NyA3LjUzNzgxIDEuNTQ1ODYgOS4wMDgxMSAxLjgyODAxIDEwLjQyNjZDMi4xMTAxNyAxMS44NDUxIDIuODA2NjEgMTMuMTQ4IDMuODI5MjggMTQuMTcwN0M0Ljg1MTk2IDE1LjE5MzQgNi4xNTQ5MiAxNS44ODk4IDcuNTczNDEgMTYuMTcyQzguOTkxODkgMTYuNDU0MSAxMC40NjIyIDE2LjMwOTMgMTEuNzk4NCAxNS43NTU5QzEzLjEzNDYgMTUuMjAyNCAxNC4yNzY2IDE0LjI2NTEgMTUuMDgwMSAxMy4wNjI2QzE1Ljg4MzYgMTEuODYwMSAxNi4zMTI1IDEwLjQ0NjMgMTYuMzEyNSA5QzE2LjMwODggNy4wNjE3NSAxNS41MzcyIDUuMjAzOTQgMTQuMTY2NiAzLjgzMzM5QzEyLjc5NjEgMi40NjI4MyAxMC45MzgzIDEuNjkxMjIgOSAxLjY4NzVaTTEyLjY3NzMgNi4wNTM5MUwxMC43MDg2IDEwLjQyNzNDMTAuNjQ3NyAxMC41NTM5IDEwLjU0MjcgMTAuNjUzOSAxMC40MTMzIDEwLjcwODZMNi4yMzY3MiAxMi41MDE2QzYuMTY3MzQgMTIuNTI5MSA2LjA5MzQxIDEyLjU0MzQgNi4wMTg3NSAxMi41NDM3QzUuODY5MSAxMi41NDQ2IDUuNzI1MTMgMTIuNDg2NSA1LjYxNzk3IDEyLjM4MkM1LjUzODU1IDEyLjMwMjYgNS40ODQ3MiAxMi4yMDEyIDUuNDYzNDIgMTIuMDkxQzUuNDQyMTIgMTEuOTgwNyA1LjQ1NDMxIDExLjg2NjYgNS40OTg0NCAxMS43NjMzTDcuMjkxNDEgNy41ODY3MkM3LjM0NjA1IDcuNDU3MzEgNy40NDYwNiA3LjM1MjI5IDcuNTcyNjYgNy4yOTE0MUwxMS45MzIgNS4zMDg1OUMxMi4wMzczIDUuMjYyMzMgMTIuMTU0IDUuMjQ4OTkgMTIuMjY3IDUuMjcwMzNDMTIuMzc5OSA1LjI5MTY2IDEyLjQ4MzcgNS4zNDY2NyAxMi41NjQ4IDUuNDI4MTJDMTIuNjQ2MyA1LjUwNzgyIDEyLjcwMDkgNS42MTA5IDEyLjcyMSA1LjcyMzA1QzEyLjc0MTIgNS44MzUyIDEyLjcyNTkgNS45NTA4NCAxMi42NzczIDYuMDUzOTFaIiBmaWxsPSIjNjc3NDg5Ii8+CjwvZz4KPC9zdmc+Cg==",
+            "Type": "Standard",
+            "IsFolderView": false,
+            "IsCopilotEnabled": true,
+            "SubMenu": [],
+            "HelpMessage": null,
+            "EntityId": null
+          },
+          {
+            "Name": "Voices",
+            "DisplayName": "Voices",
+            "Hide": false,
+            "Id": "f55249519da4c07fa13943ae951064fe",
+            "Icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IldhdmVmb3JtIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTE1LjE4NzUgMi44MTI1SDIuODEyNUMyLjUxNDEzIDIuODEyNSAyLjIyNzk4IDIuOTMxMDMgMi4wMTcgMy4xNDJDMS44MDYwMyAzLjM1Mjk4IDEuNjg3NSAzLjYzOTEzIDEuNjg3NSAzLjkzNzVWMTQuMDYyNUMxLjY4NzUgMTQuMzYwOSAxLjgwNjAzIDE0LjY0NyAyLjAxNyAxNC44NThDMi4yMjc5OCAxNS4wNjkgMi41MTQxMyAxNS4xODc1IDIuODEyNSAxNS4xODc1SDE1LjE4NzVDMTUuNDg1OSAxNS4xODc1IDE1Ljc3MiAxNS4wNjkgMTUuOTgzIDE0Ljg1OEMxNi4xOTQgMTQuNjQ3IDE2LjMxMjUgMTQuMzYwOSAxNi4zMTI1IDE0LjA2MjVWMy45Mzc1QzE2LjMxMjUgMy42MzkxMyAxNi4xOTQgMy4zNTI5OCAxNS45ODMgMy4xNDJDMTUuNzcyIDIuOTMxMDMgMTUuNDg1OSAyLjgxMjUgMTUuMTg3NSAyLjgxMjVaTTUuMDYyNSAxMC42ODc1QzUuMDYyNSAxMC44MzY3IDUuMDAzMjQgMTAuOTc5OCA0Ljg5Nzc1IDExLjA4NTJDNC43OTIyNiAxMS4xOTA3IDQuNjQ5MTggMTEuMjUgNC41IDExLjI1QzQuMzUwODIgMTEuMjUgNC4yMDc3NCAxMS4xOTA3IDQuMTAyMjUgMTEuMDg1MkMzLjk5Njc2IDEwLjk3OTggMy45Mzc1IDEwLjgzNjcgMy45Mzc1IDEwLjY4NzVWNy4zMTI1QzMuOTM3NSA3LjE2MzMyIDMuOTk2NzYgNy4wMjAyNCA0LjEwMjI1IDYuOTE0NzVDNC4yMDc3NCA2LjgwOTI2IDQuMzUwODIgNi43NSA0LjUgNi43NUM0LjY0OTE4IDYuNzUgNC43OTIyNiA2LjgwOTI2IDQuODk3NzUgNi45MTQ3NUM1LjAwMzI0IDcuMDIwMjQgNS4wNjI1IDcuMTYzMzIgNS4wNjI1IDcuMzEyNVYxMC42ODc1Wk03LjMxMjUgMTIuOTM3NUM3LjMxMjUgMTMuMDg2NyA3LjI1MzI0IDEzLjIyOTggNy4xNDc3NSAxMy4zMzUyQzcuMDQyMjYgMTMuNDQwNyA2Ljg5OTE4IDEzLjUgNi43NSAxMy41QzYuNjAwODIgMTMuNSA2LjQ1Nzc0IDEzLjQ0MDcgNi4zNTIyNSAxMy4zMzUyQzYuMjQ2NzYgMTMuMjI5OCA2LjE4NzUgMTMuMDg2NyA2LjE4NzUgMTIuOTM3NVY1LjA2MjVDNi4xODc1IDQuOTEzMzIgNi4yNDY3NiA0Ljc3MDI0IDYuMzUyMjUgNC42NjQ3NUM2LjQ1Nzc0IDQuNTU5MjYgNi42MDA4MiA0LjUgNi43NSA0LjVDNi44OTkxOCA0LjUgNy4wNDIyNiA0LjU1OTI2IDcuMTQ3NzUgNC42NjQ3NUM3LjI1MzI0IDQuNzcwMjQgNy4zMTI1IDQuOTEzMzIgNy4zMTI1IDUuMDYyNVYxMi45Mzc1Wk05LjU2MjUgMTEuODEyNUM5LjU2MjUgMTEuOTYxNyA5LjUwMzI0IDEyLjEwNDggOS4zOTc3NSAxMi4yMTAyQzkuMjkyMjYgMTIuMzE1NyA5LjE0OTE4IDEyLjM3NSA5IDEyLjM3NUM4Ljg1MDgyIDEyLjM3NSA4LjcwNzc0IDEyLjMxNTcgOC42MDIyNSAxMi4yMTAyQzguNDk2NzYgMTIuMTA0OCA4LjQzNzUgMTEuOTYxNyA4LjQzNzUgMTEuODEyNVY2LjE4NzVDOC40Mzc1IDYuMDM4MzIgOC40OTY3NiA1Ljg5NTI0IDguNjAyMjUgNS43ODk3NUM4LjcwNzc0IDUuNjg0MjYgOC44NTA4MiA1LjYyNSA5IDUuNjI1QzkuMTQ5MTggNS42MjUgOS4yOTIyNiA1LjY4NDI2IDkuMzk3NzUgNS43ODk3NUM5LjUwMzI0IDUuODk1MjQgOS41NjI1IDYuMDM4MzIgOS41NjI1IDYuMTg3NVYxMS44MTI1Wk0xMS44MTI1IDEwLjY4NzVDMTEuODEyNSAxMC44MzY3IDExLjc1MzIgMTAuOTc5OCAxMS42NDc3IDExLjA4NTJDMTEuNTQyMyAxMS4xOTA3IDExLjM5OTIgMTEuMjUgMTEuMjUgMTEuMjVDMTEuMTAwOCAxMS4yNSAxMC45NTc3IDExLjE5MDcgMTAuODUyMyAxMS4wODUyQzEwLjc0NjggMTAuOTc5OCAxMC42ODc1IDEwLjgzNjcgMTAuNjg3NSAxMC42ODc1VjcuMzEyNUMxMC42ODc1IDcuMTYzMzIgMTAuNzQ2OCA3LjAyMDI0IDEwLjg1MjMgNi45MTQ3NUMxMC45NTc3IDYuODA5MjYgMTEuMTAwOCA2Ljc1IDExLjI1IDYuNzVDMTEuMzk5MiA2Ljc1IDExLjU0MjMgNi44MDkyNiAxMS42NDc3IDYuOTE0NzVDMTEuNzUzMiA3LjAyMDI0IDExLjgxMjUgNy4xNjMzMiAxMS44MTI1IDcuMzEyNVYxMC42ODc1Wk0xNC4wNjI1IDExLjI1QzE0LjA2MjUgMTEuMzk5MiAxNC4wMDMyIDExLjU0MjMgMTMuODk3NyAxMS42NDc3QzEzLjc5MjMgMTEuNzUzMiAxMy42NDkyIDExLjgxMjUgMTMuNSAxMS44MTI1QzEzLjM1MDggMTEuODEyNSAxMy4yMDc3IDExLjc1MzIgMTMuMTAyMyAxMS42NDc3QzEyLjk5NjggMTEuNTQyMyAxMi45Mzc1IDExLjM5OTIgMTIuOTM3NSAxMS4yNVY2Ljc1QzEyLjkzNzUgNi42MDA4MiAxMi45OTY4IDYuNDU3NzQgMTMuMTAyMyA2LjM1MjI1QzEzLjIwNzcgNi4yNDY3NiAxMy4zNTA4IDYuMTg3NSAxMy41IDYuMTg3NUMxMy42NDkyIDYuMTg3NSAxMy43OTIzIDYuMjQ2NzYgMTMuODk3NyA2LjM1MjI1QzE0LjAwMzIgNi40NTc3NCAxNC4wNjI1IDYuNjAwODIgMTQuMDYyNSA2Ljc1VjExLjI1WiIgZmlsbD0iIzY3NzQ4OSIvPgo8L2c+Cjwvc3ZnPgo=",
+            "Type": "Views",
+            "IsFolderView": true,
+            "IsCopilotEnabled": false,
+            "SubMenu": [
+              {
+                "Name": "All Voices",
+                "DisplayName": "All Voices",
+                "Hide": false,
+                "Id": "13205edf12abb045587aa35f7c6533d5",
+                "Icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M22.1538 2H1.84615C1.35652 2 0.886947 2.1945 0.540726 2.54073C0.194505 2.88695 0 3.35652 0 3.84615V20.4615C0 20.9512 0.194505 21.4207 0.540726 21.767C0.886947 22.1132 1.35652 22.3077 1.84615 22.3077H22.1538C22.6435 22.3077 23.1131 22.1132 23.4593 21.767C23.8055 21.4207 24 20.9512 24 20.4615V3.84615C24 3.35652 23.8055 2.88695 23.4593 2.54073C23.1131 2.1945 22.6435 2 22.1538 2ZM5.53846 14.9231C5.53846 15.1679 5.44121 15.4027 5.2681 15.5758C5.09499 15.7489 4.8602 15.8462 4.61538 15.8462C4.37057 15.8462 4.13578 15.7489 3.96267 15.5758C3.78956 15.4027 3.69231 15.1679 3.69231 14.9231V9.38461C3.69231 9.1398 3.78956 8.90501 3.96267 8.7319C4.13578 8.55879 4.37057 8.46154 4.61538 8.46154C4.8602 8.46154 5.09499 8.55879 5.2681 8.7319C5.44121 8.90501 5.53846 9.1398 5.53846 9.38461V14.9231ZM9.23077 18.6154C9.23077 18.8602 9.13352 19.095 8.96041 19.2681C8.7873 19.4412 8.55251 19.5385 8.30769 19.5385C8.06288 19.5385 7.82809 19.4412 7.65498 19.2681C7.48187 19.095 7.38462 18.8602 7.38462 18.6154V5.69231C7.38462 5.44749 7.48187 5.2127 7.65498 5.03959C7.82809 4.86648 8.06288 4.76923 8.30769 4.76923C8.55251 4.76923 8.7873 4.86648 8.96041 5.03959C9.13352 5.2127 9.23077 5.44749 9.23077 5.69231V18.6154ZM12.9231 16.7692C12.9231 17.014 12.8258 17.2488 12.6527 17.4219C12.4796 17.5951 12.2448 17.6923 12 17.6923C11.7552 17.6923 11.5204 17.5951 11.3473 17.4219C11.1742 17.2488 11.0769 17.014 11.0769 16.7692V7.53846C11.0769 7.29365 11.1742 7.05886 11.3473 6.88575C11.5204 6.71264 11.7552 6.61538 12 6.61538C12.2448 6.61538 12.4796 6.71264 12.6527 6.88575C12.8258 7.05886 12.9231 7.29365 12.9231 7.53846V16.7692ZM16.6154 14.9231C16.6154 15.1679 16.5181 15.4027 16.345 15.5758C16.1719 15.7489 15.9371 15.8462 15.6923 15.8462C15.4475 15.8462 15.2127 15.7489 15.0396 15.5758C14.8665 15.4027 14.7692 15.1679 14.7692 14.9231V9.38461C14.7692 9.1398 14.8665 8.90501 15.0396 8.7319C15.2127 8.55879 15.4475 8.46154 15.6923 8.46154C15.9371 8.46154 16.1719 8.55879 16.345 8.7319C16.5181 8.90501 16.6154 9.1398 16.6154 9.38461V14.9231ZM20.3077 15.8462C20.3077 16.091 20.2104 16.3258 20.0373 16.4989C19.8642 16.672 19.6294 16.7692 19.3846 16.7692C19.1398 16.7692 18.905 16.672 18.7319 16.4989C18.5588 16.3258 18.4615 16.091 18.4615 15.8462V8.46154C18.4615 8.21672 18.5588 7.98193 18.7319 7.80882C18.905 7.63571 19.1398 7.53846 19.3846 7.53846C19.6294 7.53846 19.8642 7.63571 20.0373 7.80882C20.2104 7.98193 20.3077 8.21672 20.3077 8.46154V15.8462Z\" fill=\"currentcolor\"/>\n</svg>\n",
+                "Type": "All Voices",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": "Sample",
+                "EntityId": null
+              },
+              {
+                "Name": "Unhappy and Neutral",
+                "DisplayName": "Unhappy and Neutral",
+                "Hide": false,
+                "Id": "6212af09568463db824de1ac5831becd",
+                "Icon": null,
+                "Type": "Unhappy and Neutral",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Complaints",
+                "DisplayName": "Complaints",
+                "Hide": false,
+                "Id": "b09dfa2de8043b88efe1f7cb91cf8f3c",
+                "Icon": null,
+                "Type": "Complaints",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Suggestions",
+                "DisplayName": "Suggestions",
+                "Hide": false,
+                "Id": "41ecca7200a4431cf9b855a62e6ab666",
+                "Icon": null,
+                "Type": "Suggestions",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Other Language Voices",
+                "DisplayName": "Other Language Voices",
+                "Hide": false,
+                "Id": "213fbc27266863cc30df8495f42d888d",
+                "Icon": null,
+                "Type": "Other Language Voices",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              }
+            ],
+            "HelpMessage": "Voices Help Message",
+            "EntityId": null
+          },
+          {
+            "Name": "Voiced Customers",
+            "DisplayName": "Voiced Customers",
+            "Hide": false,
+            "Id": "7e6622b3b3403ea564e8de56881dea07",
+            "Icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IlVzZXJzVGhyZWUiPgo8cGF0aCBpZD0iVmVjdG9yIiBkPSJNNC41MDgzMiAxMC4zOTE3QzQuNTEwMjMgMTAuNDI5OCA0LjUwNDM3IDEwLjQ2NzkgNC40OTEwOSAxMC41MDM2QzQuNDc3ODEgMTAuNTM5NCA0LjQ1NzQgMTAuNTcyMSA0LjQzMTA5IDEwLjU5OTdDNC40MDQ3OCAxMC42MjczIDQuMzczMTMgMTAuNjQ5MyA0LjMzODA1IDEwLjY2NDNDNC4zMDI5OCAxMC42NzkzIDQuMjY1MjIgMTAuNjg3IDQuMjI3MDcgMTAuNjg3SDEuMTI0ODlDMC45OTc5MjYgMTAuNjg3MiAwLjg3NDYzNSAxMC42NDQ0IDAuNzc1MDYyIDEwLjU2NTdDMC42NzU0ODkgMTAuNDg2OSAwLjYwNTQ5IDEwLjM3NjggMC41NzY0NDggMTAuMjUzMkMwLjU1ODM2NCAxMC4xNjg2IDAuNTU5MTk4IDEwLjA4MSAwLjU3ODg4OSA5Ljk5Njc5QzAuNTk4NTgxIDkuOTEyNTYgMC42MzY2NDMgOS44MzM3MSAwLjY5MDM1NCA5Ljc2NTlDMS4xODY2MyA5LjEwNzc2IDEuODQ1MDkgOC41ODk1NyAyLjYwMTQ1IDguMjYxOTJDMi4yNjkzOCA3Ljk1OTE2IDIuMDE0NjkgNy41ODEyMyAxLjg1ODcyIDcuMTU5OEMxLjcwMjc1IDYuNzM4MzYgMS42NTAwMyA2LjI4NTY5IDEuNzA0OTcgNS44Mzk2OUMxLjc1OTkyIDUuMzkzNjkgMS45MjA5NCA0Ljk2NzM1IDIuMTc0NTQgNC41OTYzOEMyLjQyODE0IDQuMjI1NCAyLjc2Njk0IDMuOTIwNTkgMy4xNjI1NiAzLjcwNzQ4QzMuNTU4MTkgMy40OTQzNyAzLjk5OTEyIDMuMzc5MTYgNC40NDg0MiAzLjM3MTVDNC44OTc3MyAzLjM2Mzg0IDUuMzQyMzMgMy40NjM5NSA1Ljc0NDk5IDMuNjYzNDVDNi4xNDc2NSAzLjg2Mjk1IDYuNDk2NjQgNC4xNTYwMyA2Ljc2Mjc0IDQuNTE4MTVDNy4wMjg4NCA0Ljg4MDI2IDcuMjA0MyA1LjMwMDg2IDcuMjc0NDIgNS43NDQ3M0M3LjI4MzQ3IDUuODA0NDIgNy4yNzI3OCA1Ljg2NTQzIDcuMjQzOTcgNS45MTg0OUM3LjIxNTE2IDUuOTcxNTQgNy4xNjk4IDYuMDEzNzMgNy4xMTQ4MSA2LjAzODY0QzYuMzM0NjEgNi4zOTkzMiA1LjY3Mzg3IDYuOTc1NjUgNS4yMTA1NCA3LjY5OTYxQzQuNzQ3MjEgOC40MjM1OCA0LjUwMDYyIDkuMjY0OTYgNC40OTk4OSAxMC4xMjQ1QzQuNDk5ODkgMTAuMjE0NSA0LjQ5OTg5IDEwLjMwMzEgNC41MDgzMiAxMC4zOTE3Wk0xNy4zMDUyIDkuNzY1MkMxNi44MTAxIDkuMTA3ODIgMTYuMTUzMSA4LjU4OTkxIDE1LjM5ODMgOC4yNjE5MkMxNS43MzA0IDcuOTU5MTYgMTUuOTg1MSA3LjU4MTIzIDE2LjE0MTEgNy4xNTk4QzE2LjI5NyA2LjczODM2IDE2LjM0OTcgNi4yODU2OSAxNi4yOTQ4IDUuODM5NjlDMTYuMjM5OSA1LjM5MzY5IDE2LjA3ODggNC45NjczNSAxNS44MjUyIDQuNTk2MzhDMTUuNTcxNiA0LjIyNTQgMTUuMjMyOCAzLjkyMDU5IDE0LjgzNzIgMy43MDc0OEMxNC40NDE2IDMuNDk0MzcgMTQuMDAwNyAzLjM3OTE2IDEzLjU1MTMgMy4zNzE1QzEzLjEwMiAzLjM2Mzg0IDEyLjY1NzQgMy40NjM5NSAxMi4yNTQ4IDMuNjYzNDVDMTEuODUyMSAzLjg2Mjk1IDExLjUwMzEgNC4xNTYwMyAxMS4yMzcgNC41MTgxNUMxMC45NzA5IDQuODgwMjYgMTAuNzk1NSA1LjMwMDg2IDEwLjcyNTQgNS43NDQ3M0MxMC43MTYzIDUuODA0NDIgMTAuNzI3IDUuODY1NDMgMTAuNzU1OCA1LjkxODQ5QzEwLjc4NDYgNS45NzE1NCAxMC44MyA2LjAxMzczIDEwLjg4NSA2LjAzODY0QzExLjY2NTIgNi4zOTkzMiAxMi4zMjU5IDYuOTc1NjUgMTIuNzg5MiA3LjY5OTYxQzEzLjI1MjYgOC40MjM1OCAxMy40OTkxIDkuMjY0OTYgMTMuNDk5OSAxMC4xMjQ1QzEzLjQ5OTkgMTAuMjE0NSAxMy40OTk5IDEwLjMwMzEgMTMuNDkxNCAxMC4zOTE3QzEzLjQ4OTUgMTAuNDI5OCAxMy40OTU0IDEwLjQ2NzkgMTMuNTA4NyAxMC41MDM2QzEzLjUyMiAxMC41Mzk0IDEzLjU0MjQgMTAuNTcyMSAxMy41Njg3IDEwLjU5OTdDMTMuNTk1IDEwLjYyNzMgMTMuNjI2NiAxMC42NDkzIDEzLjY2MTcgMTAuNjY0M0MxMy42OTY4IDEwLjY3OTMgMTMuNzM0NiAxMC42ODcgMTMuNzcyNyAxMC42ODdIMTYuODc0OUMxNy4wMDE4IDEwLjY4NzIgMTcuMTI1MSAxMC42NDQ0IDE3LjIyNDcgMTAuNTY1N0MxNy4zMjQzIDEwLjQ4NjkgMTcuMzk0MyAxMC4zNzY4IDE3LjQyMzMgMTAuMjUzMkMxNy40NDE1IDEwLjE2ODQgMTcuNDQwNyAxMC4wODA3IDE3LjQyMDkgOS45OTYzQzE3LjQwMSA5LjkxMTkyIDE3LjM2MjcgOS44MzI5OSAxNy4zMDg3IDkuNzY1MkgxNy4zMDUyWk0xMS4wNDc0IDEyLjgwMTNDMTEuNjA3NSAxMi4zNzI0IDEyLjAxOSAxMS43Nzg3IDEyLjIyNDMgMTEuMTAzOEMxMi40Mjk2IDEwLjQyODggMTIuNDE4MiA5LjcwNjU2IDEyLjE5MTcgOS4wMzg0NEMxMS45NjUzIDguMzcwMzIgMTEuNTM1MSA3Ljc4OTk2IDEwLjk2MTggNy4zNzg5MUMxMC4zODg1IDYuOTY3ODcgOS43MDA3NyA2Ljc0NjgxIDguOTk1MzEgNi43NDY4MUM4LjI4OTg2IDYuNzQ2ODEgNy42MDIxNCA2Ljk2Nzg3IDcuMDI4ODEgNy4zNzg5MUM2LjQ1NTQ4IDcuNzg5OTYgNi4wMjUzNyA4LjM3MDMyIDUuNzk4OTIgOS4wMzg0NEM1LjU3MjQ3IDkuNzA2NTYgNS41NjEwNyAxMC40Mjg4IDUuNzY2MzMgMTEuMTAzOEM1Ljk3MTU4IDExLjc3ODcgNi4zODMxNyAxMi4zNzI0IDYuOTQzMjQgMTIuODAxM0M1Ljk0OTQgMTMuMjMxOSA1LjExOTUzIDEzLjk2OTQgNC41NzUxMiAxNC45MDU3QzQuNTI1NzQgMTQuOTkxMyA0LjQ5OTc1IDE1LjA4ODMgNC40OTk3NiAxNS4xODdDNC40OTk3NiAxNS4yODU4IDQuNTI1NzcgMTUuMzgyOCA0LjU3NTE1IDE1LjQ2ODNDNC42MjQ1NCAxNS41NTM4IDQuNjk1NTYgMTUuNjI0OCA0Ljc4MTA5IDE1LjY3NDJDNC44NjY2MiAxNS43MjM1IDQuOTYzNjQgMTUuNzQ5NSA1LjA2MjM5IDE1Ljc0OTVIMTIuOTM3NEMxMy4wMzYxIDE1Ljc0OTUgMTMuMTMzMiAxNS43MjM1IDEzLjIxODcgMTUuNjc0MkMxMy4zMDQyIDE1LjYyNDggMTMuMzc1MiAxNS41NTM4IDEzLjQyNDYgMTUuNDY4M0MxMy40NzQgMTUuMzgyOCAxMy41IDE1LjI4NTggMTMuNSAxNS4xODdDMTMuNSAxNS4wODgzIDEzLjQ3NCAxNC45OTEzIDEzLjQyNDcgMTQuOTA1N0MxMi44NzkxIDEzLjk2ODggMTIuMDQ3NyAxMy4yMzEyIDExLjA1MjMgMTIuODAxM0gxMS4wNDc0WiIgZmlsbD0iIzY3NzQ4OSIvPgo8L2c+Cjwvc3ZnPgo=",
+            "Type": "Views",
+            "IsFolderView": true,
+            "IsCopilotEnabled": false,
+            "SubMenu": [
+              {
+                "Name": "All Customers",
+                "DisplayName": "All Customers",
+                "Hide": false,
+                "Id": "4bade83d287e61e971fb0c41c4e51d91",
+                "Icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M19.9696 14.0187C19.9721 14.3569 19.8692 14.6875 19.6753 14.9645C19.4813 15.2416 19.2059 15.4514 18.8873 15.5649L13.5066 17.544L11.5275 22.9247C11.4103 23.2403 11.1994 23.5125 10.923 23.7047C10.6466 23.897 10.318 24 9.98132 24C9.64465 24 9.31604 23.897 9.03965 23.7047C8.76325 23.5125 8.5523 23.2403 8.43515 22.9247L6.45604 17.544L1.07534 15.5649C0.75971 15.4477 0.487495 15.2368 0.295265 14.9604C0.103036 14.684 0 14.3553 0 14.0187C0 13.682 0.103036 13.3534 0.295265 13.077C0.487495 12.8006 0.75971 12.5897 1.07534 12.4725L6.45604 10.4934L8.43515 5.11269C8.5523 4.79706 8.76325 4.52485 9.03965 4.33262C9.31604 4.14039 9.64465 4.03735 9.98132 4.03735C10.318 4.03735 10.6466 4.14039 10.923 4.33262C11.1994 4.52485 11.4103 4.79706 11.5275 5.11269L13.5066 10.4934L18.8873 12.4725C19.2059 12.5859 19.4813 12.7958 19.6753 13.0728C19.8692 13.3499 19.9721 13.6805 19.9696 14.0187V14.0187ZM14.1045 4.12314H15.7537V5.7724C15.7537 5.9911 15.8406 6.20085 15.9952 6.3555C16.1499 6.51014 16.3596 6.59702 16.5783 6.59702C16.7971 6.59702 17.0068 6.51014 17.1614 6.3555C17.3161 6.20085 17.403 5.9911 17.403 5.7724V4.12314H19.0522C19.2709 4.12314 19.4807 4.03626 19.6353 3.88161C19.79 3.72696 19.8769 3.51722 19.8769 3.29851C19.8769 3.07981 19.79 2.87006 19.6353 2.71541C19.4807 2.56076 19.2709 2.47388 19.0522 2.47388H17.403V0.824628C17.403 0.605923 17.3161 0.396176 17.1614 0.241528C17.0068 0.0868802 16.7971 0 16.5783 0C16.3596 0 16.1499 0.0868802 15.9952 0.241528C15.8406 0.396176 15.7537 0.605923 15.7537 0.824628V2.47388H14.1045C13.8858 2.47388 13.676 2.56076 13.5214 2.71541C13.3667 2.87006 13.2798 3.07981 13.2798 3.29851C13.2798 3.51722 13.3667 3.72696 13.5214 3.88161C13.676 4.03626 13.8858 4.12314 14.1045 4.12314ZM23.1754 7.42165H22.3507V6.59702C22.3507 6.37832 22.2639 6.16857 22.1092 6.01392C21.9546 5.85928 21.7448 5.7724 21.5261 5.7724C21.3074 5.7724 21.0977 5.85928 20.943 6.01392C20.7884 6.16857 20.7015 6.37832 20.7015 6.59702V7.42165H19.8769C19.6582 7.42165 19.4484 7.50853 19.2938 7.66318C19.1391 7.81783 19.0522 8.02758 19.0522 8.24628C19.0522 8.46499 19.1391 8.67473 19.2938 8.82938C19.4484 8.98403 19.6582 9.07091 19.8769 9.07091H20.7015V9.89554C20.7015 10.1142 20.7884 10.324 20.943 10.4786C21.0977 10.6333 21.3074 10.7202 21.5261 10.7202C21.7448 10.7202 21.9546 10.6333 22.1092 10.4786C22.2639 10.324 22.3507 10.1142 22.3507 9.89554V9.07091H23.1754C23.3941 9.07091 23.6038 8.98403 23.7585 8.82938C23.9131 8.67473 24 8.46499 24 8.24628C24 8.02758 23.9131 7.81783 23.7585 7.66318C23.6038 7.50853 23.3941 7.42165 23.1754 7.42165Z\" fill=\"currentcolor\"/>\n</svg>\n",
+                "Type": "All Customers",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Consumers",
+                "DisplayName": "Consumers",
+                "Hide": false,
+                "Id": "1ebe06b1421d14bafea4a4d9a545d956",
+                "Icon": null,
+                "Type": "Consumers",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Builders",
+                "DisplayName": "Builders",
+                "Hide": false,
+                "Id": "a7aabedfa51c621af1c82ac19da57a93",
+                "Icon": null,
+                "Type": "Builders",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              }
+            ],
+            "HelpMessage": "Test Help Message",
+            "EntityId": null
+          },
+          {
+            "Name": "360 Challenges",
+            "DisplayName": "360 Challenges",
+            "Hide": false,
+            "Id": "b3bf8167f6744fe74d8e884258f2eb03",
+            "Icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkNoYXJ0UG9sYXIiPgo8cGF0aCBpZD0iVmVjdG9yIiBkPSJNOC40Mzc2MyAxNC4wMzA4VjE1Ljk4MTJDOC40Mzc4OSAxNi4wMjExIDguNDI5NyAxNi4wNjA1IDguNDEzNTkgMTYuMDk2OUM4LjM5NzQ3IDE2LjEzMzMgOC4zNzM4MSAxNi4xNjU5IDguMzQ0MTcgMTYuMTkyNUM4LjMxNDUyIDE2LjIxOTEgOC4yNzk1NyAxNi4yMzkxIDguMjQxNjIgMTYuMjUxMUM4LjIwMzY3IDE2LjI2MzIgOC4xNjM1OSAxNi4yNjcxIDguMTI0MDMgMTYuMjYyNUM2LjQ5OTgzIDE2LjA2MzkgNC45ODg4MyAxNS4zMjc0IDMuODMxOCAxNC4xNzA0QzIuNjc0NzYgMTMuMDEzMyAxLjkzODI2IDExLjUwMjMgMS43Mzk2NiA5Ljg3ODEyQzEuNzM1MDggOS44Mzg1NiAxLjczODk1IDkuNzk4NDggMS43NTEwMiA5Ljc2MDUzQzEuNzYzMDkgOS43MjI1OCAxLjc4MzA4IDkuNjg3NjMgMS44MDk2NyA5LjY1Nzk4QzEuODM2MjUgOS42MjgzNCAxLjg2ODgzIDkuNjA0NjggMS45MDUyNSA5LjU4ODU3QzEuOTQxNjcgOS41NzI0NSAxLjk4MTA5IDkuNTY0MjYgMi4wMjA5MSA5LjU2NDUySDMuOTY5OTdDNC4wOTkzOCAxMC43MDQ3IDQuNjExNzEgMTEuNzY3MiA1LjQyMzIzIDEyLjU3ODVDNi4yMzQ3NCAxMy4zODk3IDcuMjk3NDQgMTMuOTAxNyA4LjQzNzYzIDE0LjAzMDhaTTEyLjg5NjggOS41NjMxMkg5LjU2MjYzVjEyLjg5NzNDMTAuNDAzMyAxMi43NzQ3IDExLjE4MTkgMTIuMzgzOSAxMS43ODI3IDExLjc4MzFDMTIuMzgzNCAxMS4xODI0IDEyLjc3NDIgMTAuNDAzOCAxMi44OTY4IDkuNTYzMTJaTTkuNTYyNjMgNS4xMDM5VjguNDM4MTJIMTIuODk2OEMxMi43NzQyIDcuNTk3NDQgMTIuMzgzNCA2LjgxODgzIDExLjc4MjcgNi4yMTgwOEMxMS4xODE5IDUuNjE3MzQgMTAuNDAzMyA1LjIyNjU3IDkuNTYyNjMgNS4xMDM5Wk0xNS45ODA4IDkuNTYzMTJIMTQuMDMwM0MxMy45MDEyIDEwLjcwMzUgMTMuMzg5IDExLjc2NjQgMTIuNTc3NCAxMi41Nzc5QzExLjc2NTkgMTMuMzg5NSAxMC43MDMgMTMuOTAxNyA5LjU2MjYzIDE0LjAzMDhWMTUuOTgxMkM5LjU2MjM2IDE2LjAyMTEgOS41NzA1NiAxNi4wNjA1IDkuNTg2NjcgMTYuMDk2OUM5LjYwMjc4IDE2LjEzMzMgOS42MjY0NCAxNi4xNjU5IDkuNjU2MDkgMTYuMTkyNUM5LjY4NTc0IDE2LjIxOTEgOS43MjA2OSAxNi4yMzkxIDkuNzU4NjQgMTYuMjUxMUM5Ljc5NjU5IDE2LjI2MzIgOS44MzY2NyAxNi4yNjcxIDkuODc2MjIgMTYuMjYyNUMxMS41MDA0IDE2LjA2MzkgMTMuMDExNCAxNS4zMjc0IDE0LjE2ODUgMTQuMTcwNEMxNS4zMjU1IDEzLjAxMzMgMTYuMDYyIDExLjUwMjMgMTYuMjYwNiA5Ljg3ODEyQzE2LjI2NTQgOS44Mzg1NyAxNi4yNjE3IDkuNzk4NDYgMTYuMjQ5OCA5Ljc2MDQ0QzE2LjIzNzkgOS43MjI0MSAxNi4yMTgxIDkuNjg3MzUgMTYuMTkxNiA5LjY1NzU3QzE2LjE2NTIgOS42Mjc3OSAxNi4xMzI3IDkuNjAzOTcgMTYuMDk2MyA5LjU4NzY5QzE2LjA2IDkuNTcxNCAxNi4wMjA2IDkuNTYzMDMgMTUuOTgwOCA5LjU2MzEyWk0xNC4wMzAzIDguNDM4MTJIMTUuOTgwOEMxNi4wMjA2IDguNDM4MzggMTYuMDYgOC40MzAxOSAxNi4wOTY0IDguNDE0MDdDMTYuMTMyOCA4LjM5Nzk2IDE2LjE2NTQgOC4zNzQzIDE2LjE5MiA4LjM0NDY2QzE2LjIxODYgOC4zMTUwMSAxNi4yMzg2IDguMjgwMDYgMTYuMjUwNiA4LjI0MjExQzE2LjI2MjcgOC4yMDQxNiAxNi4yNjY2IDguMTY0MDggMTYuMjYyIDguMTI0NTJDMTYuMDYzNCA2LjUwMDMyIDE1LjMyNjkgNC45ODkzMiAxNC4xNjk5IDMuODMyMjhDMTMuMDEyOCAyLjY3NTI1IDExLjUwMTggMS45Mzg3NSA5Ljg3NzYzIDEuNzQwMTVDOS44MzgwNyAxLjczNTU3IDkuNzk3OTkgMS43Mzk0NCA5Ljc2MDA0IDEuNzUxNTFDOS43MjIwOSAxLjc2MzU4IDkuNjg3MTQgMS43ODM1NyA5LjY1NzUgMS44MTAxNUM5LjYyNzg1IDEuODM2NzQgOS42MDQxOSAxLjg2OTMyIDkuNTg4MDggMS45MDU3NEM5LjU3MTk3IDEuOTQyMTUgOS41NjM3NyAxLjk4MTU4IDkuNTY0MDQgMi4wMjE0VjMuOTcwNDZDMTAuNzA0MiA0LjA5OTg3IDExLjc2NjcgNC42MTIyIDEyLjU3OCA1LjQyMzcxQzEzLjM4OTIgNi4yMzUyMyAxMy45MDEyIDcuMjk3OTMgMTQuMDMwMyA4LjQzODEyWk04LjEyNDAzIDEuNzQwMTVDNi40OTk4MyAxLjkzODc1IDQuOTg4ODMgMi42NzUyNSAzLjgzMTggMy44MzIyOEMyLjY3NDc2IDQuOTg5MzIgMS45MzgyNiA2LjUwMDMyIDEuNzM5NjYgOC4xMjQ1MkMxLjczNTA4IDguMTY0MDggMS43Mzg5NSA4LjIwNDE2IDEuNzUxMDIgOC4yNDIxMUMxLjc2MzA5IDguMjgwMDYgMS43ODMwOCA4LjMxNTAxIDEuODA5NjcgOC4zNDQ2NkMxLjgzNjI1IDguMzc0MyAxLjg2ODgzIDguMzk3OTYgMS45MDUyNSA4LjQxNDA3QzEuOTQxNjcgOC40MzAxOSAxLjk4MTA5IDguNDM4MzggMi4wMjA5MSA4LjQzODEySDMuOTY5OTdDNC4wOTkwOSA3LjI5NzcxIDQuNjExMjggNi4yMzQ4NSA1LjQyMjgyIDUuNDIzMzFDNi4yMzQzNiA0LjYxMTc3IDcuMjk3MjIgNC4wOTk1NyA4LjQzNzYzIDMuOTcwNDZWMi4wMTk5OUM4LjQzNzY5IDEuOTgwMjkgOC40MjkzNSAxLjk0MTAyIDguNDEzMTUgMS45MDQ3OEM4LjM5Njk1IDEuODY4NTMgOC4zNzMyNiAxLjgzNjEyIDguMzQzNjQgMS44MDk2OUM4LjMxNDAyIDEuNzgzMjUgOC4yNzkxMyAxLjc2MzM5IDguMjQxMjggMS43NTE0QzguMjAzNDMgMS43Mzk0MiA4LjE2MzQ3IDEuNzM1NTggOC4xMjQwMyAxLjc0MDE1Wk01LjEwMzQxIDguNDM4MTJIOC40Mzc2M1Y1LjEwMzlDNy41OTY5NSA1LjIyNjU3IDYuODE4MzQgNS42MTczNCA2LjIxNzYgNi4yMTgwOEM1LjYxNjg1IDYuODE4ODMgNS4yMjYwOCA3LjU5NzQ0IDUuMTAzNDEgOC40MzgxMlpNOC40Mzc2MyAxMi44OTczVjkuNTYzMTJINS4xMDM0MUM1LjIyNjA4IDEwLjQwMzggNS42MTY4NSAxMS4xODI0IDYuMjE3NiAxMS43ODMxQzYuODE4MzQgMTIuMzgzOSA3LjU5Njk1IDEyLjc3NDcgOC40Mzc2MyAxMi44OTczWiIgZmlsbD0iIzY3NzQ4OSIvPgo8L2c+Cjwvc3ZnPgo=",
+            "Type": "Views",
+            "IsFolderView": true,
+            "IsCopilotEnabled": false,
+            "SubMenu": [
+              {
+                "Name": "All Problem",
+                "DisplayName": "All Problem",
+                "Hide": false,
+                "Id": "d630b1ed017d6005a1c170cdddf73d70",
+                "Icon": null,
+                "Type": "All Problem",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Time Sensitive",
+                "DisplayName": "Time Sensitive",
+                "Hide": false,
+                "Id": "d2c45b2f7bbf5fc0f72cd10ae7a9d893",
+                "Icon": null,
+                "Type": "Time Sensitive",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              }
+            ],
+            "HelpMessage": "360 Challenges Test Help Message",
+            "EntityId": null
+          },
+          {
+            "Name": "AI Recommendations",
+            "DisplayName": "AI Recommendations",
+            "Hide": false,
+            "Id": "f475e35409d5590a7e065df8352482a6",
+            "Icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkJyYWluIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTE0LjkwNjUgNS4zNDM3NVY1LjA2MjVDMTQuOTA1NyA0LjQ1MzA3IDE0LjcyNSAzLjg1NzQyIDE0LjM4NyAzLjM1MDMyQzE0LjA0OSAyLjg0MzIyIDEzLjU2ODcgMi40NDcyNCAxMy4wMDY1IDIuMjEyMDlDMTIuNDQ0MiAxLjk3NjkzIDExLjgyNSAxLjkxMzA3IDExLjIyNjYgMi4wMjg1MkMxMC42MjgyIDIuMTQzOTcgMTAuMDc3MyAyLjQzMzU4IDkuNjQyODYgMi44NjEwMkM5LjYxNzE3IDIuODg2OTIgOS41OTY4NiAyLjkxNzY1IDkuNTgzMSAyLjk1MTQ0QzkuNTY5MzQgMi45ODUyMyA5LjU2MjQxIDMuMDIxNDEgOS41NjI3MSAzLjA1Nzg5VjkuMjk2MDJDOS41NjI4NCA5LjM0NjcyIDkuNTc2NjggOS4zOTY0NSA5LjYwMjc3IDkuNDM5OTRDOS42Mjg4NSA5LjQ4MzQyIDkuNjY2MjEgOS41MTkwNSA5LjcxMDg4IDkuNTQzMDRDOS43NTU1NSA5LjU2NzAzIDkuODA1ODggOS41Nzg1IDkuODU2NTQgOS41NzYyM0M5LjkwNzE5IDkuNTczOTcgOS45NTYzIDkuNTU4MDUgOS45OTg2NSA5LjUzMDE2QzEwLjUzMzUgOS4xODcyIDExLjE1NDggOS4wMDMzNCAxMS43OTAyIDlDMTEuOTM3MyA4Ljk5NzI3IDEyLjA3OTggOS4wNTA5OSAxMi4xODg1IDkuMTUwMTJDMTIuMjk3MiA5LjI0OTI2IDEyLjM2MzcgOS4zODYyNiAxMi4zNzQ1IDkuNTMyOTdDMTIuMzc4NSA5LjYwOTI4IDEyLjM2NjkgOS42ODU2MiAxMi4zNDA1IDkuNzU3MzFDMTIuMzE0IDkuODI5IDEyLjI3MzIgOS44OTQ1NSAxMi4yMjA2IDkuOTQ5OTVDMTIuMTY3OSAxMC4wMDUzIDEyLjEwNDYgMTAuMDQ5NCAxMi4wMzQzIDEwLjA3OTVDMTEuOTY0MSAxMC4xMDk2IDExLjg4ODQgMTAuMTI1MSAxMS44MTIgMTAuMTI1QzExLjIxNTMgMTAuMTI1IDEwLjY0MyAxMC4zNjIxIDEwLjIyMSAxMC43ODRDOS43OTkwNiAxMS4yMDYgOS41NjIwMSAxMS43NzgzIDkuNTYyMDEgMTIuMzc1VjE0Ljc1NzJDOS41NjE5NSAxNC43OTkzIDkuNTcxMzMgMTQuODQwOCA5LjU4OTQ2IDE0Ljg3ODhDOS42MDc1OSAxNC45MTY3IDkuNjM0MDEgMTQuOTUwMiA5LjY2Njc3IDE0Ljk3NjZDMTAuMDY1OSAxNS4zMDY5IDEwLjUzNTkgMTUuNTQwNyAxMS4wNDAxIDE1LjY1OTlDMTEuNTQ0NCAxNS43NzkgMTIuMDY5MyAxNS43ODAzIDEyLjU3NDEgMTUuNjYzNkMxMy4wNzg5IDE1LjU0NjkgMTMuNTUgMTUuMzE1MyAxMy45NTA3IDE0Ljk4NjlDMTQuMzUxNCAxNC42NTg0IDE0LjY3MSAxNC4yNDIgMTQuODg0NyAxMy43N0MxNC45MDYyIDEzLjcyMjUgMTQuOTE0MSAxMy42NyAxNC45MDc1IDEzLjYxODNDMTQuOTAwOSAxMy41NjY2IDE0Ljg4IDEzLjUxNzggMTQuODQ3MyAxMy40NzcyQzE0LjgxNDUgMTMuNDM2NyAxNC43NzEyIDEzLjQwNiAxNC43MjIgMTMuMzg4N0MxNC42NzI5IDEzLjM3MTQgMTQuNjE5OSAxMy4zNjggMTQuNTY5IDEzLjM3OTFDMTQuMjE4NCAxMy40NTk0IDEzLjg1OTkgMTMuNSAxMy41MDAyIDEzLjVIMTIuOTU2N0MxMi44MTE2IDEzLjUwMTggMTIuNjcxMSAxMy40NDg2IDEyLjU2MzYgMTMuMzUxMkMxMi40NTYgMTMuMjUzOCAxMi4zODkyIDEzLjExOTMgMTIuMzc2NiAxMi45NzQ4QzEyLjM3MTUgMTIuODk3OCAxMi4zODIzIDEyLjgyMDcgMTIuNDA4MiAxMi43NDhDMTIuNDM0MiAxMi42NzU0IDEyLjQ3NDggMTIuNjA4OSAxMi41Mjc2IDEyLjU1MjdDMTIuNTgwMyAxMi40OTY1IDEyLjY0NDEgMTIuNDUxNyAxMi43MTQ5IDEyLjQyMTFDMTIuNzg1NyAxMi4zOTA1IDEyLjg2MiAxMi4zNzQ4IDEyLjkzOTEgMTIuMzc1SDEzLjUwMTZDMTQuMDg5MyAxMi4zNzU5IDE0LjY2ODQgMTIuMjM0IDE1LjE4OTEgMTEuOTYxNkMxNS44MDU4IDExLjY0MDQgMTYuMzE4MSAxMS4xNTAxIDE2LjY2NTkgMTAuNTQ4MUMxNy4wMTM4IDkuOTQ2MDggMTcuMTgyOCA5LjI1NzM4IDE3LjE1MzEgOC41NjI3M0MxNy4xMjM1IDcuODY4MDkgMTYuODk2NCA3LjE5NjMxIDE2LjQ5ODQgNi42MjYxNkMxNi4xMDA1IDYuMDU2MDIgMTUuNTQ4MyA1LjYxMTE2IDE0LjkwNjUgNS4zNDM3NVpNMTQuMDYyNyA3Ljg3NUgxMy43ODE1QzEzLjExMDEgNy44NzUgMTIuNDY2MyA3LjYwODMyIDExLjk5MTYgNy4xMzM2MUMxMS41MTY5IDYuNjU4OTEgMTEuMjUwMiA2LjAxNTA4IDExLjI1MDIgNS4zNDM3NVY1LjA2MjVDMTEuMjUwMiA0LjkxMzMyIDExLjMwOTUgNC43NzAyNCAxMS40MTUgNC42NjQ3NUMxMS41MjA0IDQuNTU5MjYgMTEuNjYzNSA0LjUgMTEuODEyNyA0LjVDMTEuOTYxOSA0LjUgMTIuMTA1IDQuNTU5MjYgMTIuMjEwNSA0LjY2NDc1QzEyLjMxNTkgNC43NzAyNCAxMi4zNzUyIDQuOTEzMzIgMTIuMzc1MiA1LjA2MjVWNS4zNDM3NUMxMi4zNzUyIDUuNTI4NDIgMTIuNDExNiA1LjcxMTI4IDEyLjQ4MjMgNS44ODE5QzEyLjU1MjkgNi4wNTI1MSAxMi42NTY1IDYuMjA3NTQgMTIuNzg3MSA2LjMzODEyQzEzLjA1MDggNi42MDE4NCAxMy40MDg1IDYuNzUgMTMuNzgxNSA2Ljc1SDE0LjA2MjdDMTQuMjExOSA2Ljc1IDE0LjM1NSA2LjgwOTI2IDE0LjQ2MDUgNi45MTQ3NUMxNC41NjU5IDcuMDIwMjQgMTQuNjI1MiA3LjE2MzMyIDE0LjYyNTIgNy4zMTI1QzE0LjYyNTIgNy40NjE2OCAxNC41NjU5IDcuNjA0NzYgMTQuNDYwNSA3LjcxMDI1QzE0LjM1NSA3LjgxNTc0IDE0LjIxMTkgNy44NzUgMTQuMDYyNyA3Ljg3NVpNNi4xODc3MSAxLjk2ODc1QzUuMzY3NDggMS45Njk2OCA0LjU4MTExIDIuMjk1OTMgNC4wMDExMiAyLjg3NTkyQzMuNDIxMTQgMy40NTU5MSAzLjA5NDg5IDQuMjQyMjcgMy4wOTM5NiA1LjA2MjVWNS4zNDM3NUMyLjQ1MjI0IDUuNjExMzEgMS45MDAxIDYuMDU2MjggMS41MDIzMSA2LjYyNjVDMS4xMDQ1MSA3LjE5NjcyIDAuODc3NTQ2IDcuODY4NTUgMC44NDgwMjUgOC41NjMxOEMwLjgxODUwMyA5LjI1NzgyIDAuOTg3NjUxIDkuOTQ2NDggMS4zMzU2MyAxMC41NDg0QzEuNjgzNjEgMTEuMTUwMyAyLjE5NiAxMS42NDA1IDIuODEyNzEgMTEuOTYxNkMzLjMzMzQyIDEyLjIzNCAzLjkxMjUzIDEyLjM3NTkgNC41MDAyMSAxMi4zNzVINS4wNDM3MkM1LjE4OTA4IDEyLjM3MjkgNS4zMjk4NiAxMi40MjU4IDUuNDM3NzUgMTIuNTIzM0M1LjU0NTYzIDEyLjYyMDcgNS42MTI2MSAxMi43NTU0IDUuNjI1MjEgMTIuOTAwMkM1LjYzMDMyIDEyLjk3NzIgNS42MTk1NSAxMy4wNTQzIDUuNTkzNTggMTMuMTI3QzUuNTY3NjEgMTMuMTk5NiA1LjUyNjk4IDEzLjI2NjEgNS40NzQyMyAxMy4zMjIzQzUuNDIxNDggMTMuMzc4NSA1LjM1NzczIDEzLjQyMzMgNS4yODY5NCAxMy40NTM5QzUuMjE2MTQgMTMuNDg0NSA1LjEzOTgyIDEzLjUwMDIgNS4wNjI3MSAxMy41SDQuNTAwMjFDNC4xNDAyNiAxMy41MDAxIDMuNzgxNDcgMTMuNDU5MyAzLjQzMDc2IDEzLjM3ODRDMy4zNzk4NiAxMy4zNjczIDMuMzI2ODggMTMuMzcwNSAzLjI3NzcyIDEzLjM4NzhDMy4yMjg1NiAxMy40MDUgMy4xODUxNiAxMy40MzU2IDMuMTUyMzUgMTMuNDc2QzMuMTE5NTQgMTMuNTE2NSAzLjA5ODYyIDEzLjU2NTMgMy4wOTE5MSAxMy42MTY5QzMuMDg1MiAxMy42Njg2IDMuMDkyOTcgMTMuNzIxMSAzLjExNDM1IDEzLjc2ODZDMy4zMjc5MSAxNC4yNDA4IDMuNjQ3NDggMTQuNjU3MyA0LjA0ODIzIDE0Ljk4NTlDNC40NDg5NyAxNS4zMTQ0IDQuOTIwMDggMTUuNTQ2MSA1LjQyNDk1IDE1LjY2M0M1LjkyOTgxIDE1Ljc3OTkgNi40NTQ4MiAxNS43Nzg3IDYuOTU5MTggMTUuNjU5N0M3LjQ2MzUzIDE1LjU0MDYgNy45MzM2MyAxNS4zMDY5IDguMzMyOTQgMTQuOTc2NkM4LjM2NTcgMTQuOTUwMiA4LjM5MjEyIDE0LjkxNjcgOC40MTAyNSAxNC44Nzg4QzguNDI4MzggMTQuODQwOCA4LjQzNzc3IDE0Ljc5OTMgOC40Mzc3MSAxNC43NTcyVjEyLjM3NUM4LjQzNzcxIDExLjc3ODMgOC4yMDA2NiAxMS4yMDYgNy43Nzg3IDEwLjc4NEM3LjM1Njc0IDEwLjM2MjEgNi43ODQ0NSAxMC4xMjUgNi4xODc3MSAxMC4xMjVDNi4xMTEyOSAxMC4xMjUxIDYuMDM1NjUgMTAuMTA5NiA1Ljk2NTQgMTAuMDc5NUM1Ljg5NTE2IDEwLjA0OTQgNS44MzE3OCAxMC4wMDUzIDUuNzc5MTQgOS45NDk5NUM1LjcyNjUxIDkuODk0NTUgNS42ODU3MSA5LjgyOSA1LjY1OTI0IDkuNzU3MzFDNS42MzI3OCA5LjY4NTYyIDUuNjIxMiA5LjYwOTI4IDUuNjI1MjEgOS41MzI5N0M1LjYzNTk4IDkuMzg2MTQgNS43MDI2NCA5LjI0OTAzIDUuODExNDcgOS4xNDk4OEM1LjkyMDMgOS4wNTA3MyA2LjA2MzAxIDguOTk3MDkgNi4yMTAyMSA5QzYuODQ1NTcgOS4wMDMzNCA3LjQ2NjkgOS4xODcyIDguMDAxNzcgOS41MzAxNkM4LjA0NDEyIDkuNTU4MDUgOC4wOTMyMiA5LjU3Mzk3IDguMTQzODggOS41NzYyM0M4LjE5NDU0IDkuNTc4NSA4LjI0NDg3IDkuNTY3MDMgOC4yODk1NCA5LjU0MzA0QzguMzM0MjEgOS41MTkwNSA4LjM3MTU3IDkuNDgzNDIgOC4zOTc2NSA5LjQzOTk0QzguNDIzNzMgOS4zOTY0NSA4LjQzNzU3IDkuMzQ2NzIgOC40Mzc3MSA5LjI5NjAyVjMuMDU3ODlDOC40Mzc5NiAyLjk4NDA2IDguNDA5MTcgMi45MTMxIDguMzU3NTUgMi44NjAzMUM3Ljc4IDIuMjg4ODMgNy4wMDAyMSAxLjk2ODQyIDYuMTg3NzEgMS45Njg3NVpNNi43NTAyMSA1LjM0Mzc1QzYuNzUwMjEgNi4wMTUwOCA2LjQ4MzUyIDYuNjU4OTEgNi4wMDg4MiA3LjEzMzYxQzUuNTM0MTIgNy42MDgzMiA0Ljg5MDI5IDcuODc1IDQuMjE4OTYgNy44NzVIMy45Mzc3MUMzLjc4ODUyIDcuODc1IDMuNjQ1NDUgNy44MTU3NCAzLjUzOTk2IDcuNzEwMjVDMy40MzQ0NyA3LjYwNDc2IDMuMzc1MjEgNy40NjE2OCAzLjM3NTIxIDcuMzEyNUMzLjM3NTIxIDcuMTYzMzIgMy40MzQ0NyA3LjAyMDI0IDMuNTM5OTYgNi45MTQ3NUMzLjY0NTQ1IDYuODA5MjYgMy43ODg1MiA2Ljc1IDMuOTM3NzEgNi43NUg0LjIxODk2QzQuNDAzNjMgNi43NSA0LjU4NjQ5IDYuNzEzNjMgNC43NTcxMSA2LjY0Mjk2QzQuOTI3NzIgNi41NzIyOSA1LjA4Mjc1IDYuNDY4NyA1LjIxMzMzIDYuMzM4MTJDNS4zNDM5MSA2LjIwNzU0IDUuNDQ3NDkgNi4wNTI1MSA1LjUxODE2IDUuODgxOUM1LjU4ODgzIDUuNzExMjggNS42MjUyMSA1LjUyODQyIDUuNjI1MjEgNS4zNDM3NVY1LjA2MjVDNS42MjUyMSA0LjkxMzMyIDUuNjg0NDcgNC43NzAyNCA1Ljc4OTk2IDQuNjY0NzVDNS44OTU0NSA0LjU1OTI2IDYuMDM4NTIgNC41IDYuMTg3NzEgNC41QzYuMzM2ODkgNC41IDYuNDc5OTcgNC41NTkyNiA2LjU4NTQ2IDQuNjY0NzVDNi42OTA5NSA0Ljc3MDI0IDYuNzUwMjEgNC45MTMzMiA2Ljc1MDIxIDUuMDYyNVY1LjM0Mzc1WiIgZmlsbD0iIzY3NzQ4OSIvPgo8L2c+Cjwvc3ZnPgo=",
+            "Type": "Views",
+            "IsFolderView": true,
+            "IsCopilotEnabled": false,
+            "SubMenu": [
+              {
+                "Name": "All Recommendations",
+                "DisplayName": "All Recommendations",
+                "Hide": false,
+                "Id": "9516803391d18c486edebf18805a08b4",
+                "Icon": null,
+                "Type": "All Recommendations",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Archived Recommendations",
+                "DisplayName": "Archived Recommendations",
+                "Hide": false,
+                "Id": "a5e1f1bc03736c49fcf0c69e1f19fffe",
+                "Icon": null,
+                "Type": "Archived Recommendations",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              }
+            ],
+            "HelpMessage": " AI Recommendation Test Help Message",
+            "EntityId": null
+          },
+          {
+            "Name": "Voice",
+            "DisplayName": "Voice",
+            "Hide": false,
+            "Id": "Default",
+            "Icon": null,
+            "Type": "Entities",
+            "IsFolderView": false,
+            "IsCopilotEnabled": true,
+            "SubMenu": [
+              {
+                "Name": "Default Data View",
+                "DisplayName": "Default Data View",
+                "Hide": false,
+                "Id": "d2cf89cdbc7b75db416a8c625381a8c1",
+                "Icon": null,
+                "Type": "",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "All Voice Attributes",
+                "DisplayName": "All Voice Attributes",
+                "Hide": false,
+                "Id": "0af36ab23ca1359a4506fcfbaa2fd465",
+                "Icon": null,
+                "Type": "All Voice Attributes",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              },
+              {
+                "Name": "Voice Problem Analysis",
+                "DisplayName": "Voice Problem Analysis",
+                "Hide": false,
+                "Id": "1cbb9720a7557dc399585e9190ca42a7",
+                "Icon": null,
+                "Type": "Voice Problem Analysis",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              }
+            ],
+            "HelpMessage": null,
+            "EntityId": "Default"
+          },
+          {
+            "Name": "Problem",
+            "DisplayName": "Problem",
+            "Hide": false,
+            "Id": "3a8938727fc6462fbe443e63d288602d",
+            "Icon": null,
+            "Type": "Entities",
+            "IsFolderView": false,
+            "IsCopilotEnabled": true,
+            "SubMenu": [
+              {
+                "Name": "Default Problem View",
+                "DisplayName": "Default Problem View",
+                "Hide": false,
+                "Id": "1de66c65523635fbf2e0fd4d19349c3c",
+                "Icon": null,
+                "Type": "",
+                "IsFolderView": false,
+                "IsCopilotEnabled": true,
+                "SubMenu": null,
+                "HelpMessage": null,
+                "EntityId": null
+              }
+            ],
+            "HelpMessage": null,
+            "EntityId": "3a8938727fc6462fbe443e63d288602d"
+          }
+        ]
+      },
+      "SummaryPane": {
+        "SummaryActions": [],
+        "ShowOnlyKeywordsExtracted": false,
+        "IncludeRejections": false,
+        "ShowPageNumber": false,
+        "ShowConfidenceScore": false,
+        "ShowEmptyLabels": false,
+        "ShowErrorsOnly": false,
+        "ShowCorrectedErrorsOnly": false,
+        "ShowLabelExamplesCount": false,
+        "ShowUnassignedPages": false,
+        "DisableTableCount": true,
+        "DisableAutoGrouping": true,
+        "EnableAutoTableHeight": false,
+        "ShowDocumentTitleTooltip": false,
+        "DisableTableActions": true,
+        "ShowRecordColumnInTable": false,
+        "LockTableView": false,
+        "HideTrainingTab": false,
+        "SummaryPaneWidth": 40,
+        "AllowOnlySummaryRefresh": false,
+        "ShowTabTitle": false
+      },
+      "ActionPane": {
+        "ActionPane": null
+      },
+      "DocumentList": {
+        "DocumentListingActions": [
+          "Refresh Document",
+          "More Options",
+          "Export",
+          "Show View Title"
+        ],
+        "HideViewSettings": false,
+        "HideDocSet": false,
+        "HideActionMenus": false,
+        "HideRescore": false,
+        "HideUpdateLookup": false,
+        "HideExport": false,
+        "HidePriority": false,
+        "HideSelectedStageFilter": false,
+        "HideSelectedUserFilter": false,
+        "HideSelectedLabelFilter": false,
+        "HideMoreFilters": false,
+        "DisableSortOption": true,
+        "HideExplorer": true,
+        "SmartStageSelector": false,
+        "ShowFiltersChip": true,
+        "SwapDocumentFilterAndDocumentListing": true,
+        "IsPlainTableRows": true,
+        "IsPinnedViewDisabled": false,
+        "ExportVisibleColumns": true,
+        "SinglePageExperience": false
+      }
+    }
+  }
+}
