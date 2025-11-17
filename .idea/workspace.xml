@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8cecd7cc-8660-4ae2-ae77-a47d01bc28aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Attachments/doc_20250715_124342_62dca726-da80-4f05-b874-b0d4e40dffcf.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DownloadedBmx/Test Project BM.bmx" beforeDir="false" afterPath="$PROJECT_DIR$/DownloadedBmx/Test Project BM.bmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/addFunctionToTool.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/addFunctionToTool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/createCustomFunction.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/createCustomFunction.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/createProjectTest.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/createProjectTest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/createProjectWithDuplicateName.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/createProjectWithDuplicateName.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/createProjectWithoutMandatoryDetails.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/createProjectWithoutMandatoryDetails.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/deleteWorkFlow.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/deleteWorkFlow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/ingestDocument.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/ingestDocument.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/landingPageTest.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/landingPageTest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublishFailedScreenshots/verifyAgentCreationTest.png" beforeDir="false" afterPath="$PROJECT_DIR$/PublishFailedScreenshots/verifyAgentCreationTest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/playwright/modules/Modules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/playwright/modules/Modules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/playwright/modules/SmokeTestModules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/playwright/modules/SmokeTestModules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/playwright/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/playwright/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/smoke_test_cases/StudioPageSmokeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/smoke_test_cases/StudioPageSmokeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonFiles/SmokeTestCases.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/JsonFiles/SmokeTestCases.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vTfz4OCIxb5SBPHbmRyvuUf22r" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppOnlyAuth.executor": "Run",
+    "Application.CSVLabelReplacer.executor": "Run",
+    "Application.CompareJsonLists.executor": "Run",
+    "Application.DateFormatUpdater.executor": "Run",
+    "Application.DateFormatterUpdater.executor": "Run",
+    "Application.EmailClient.executor": "Run",
+    "Application.EmailSender.executor": "Run",
+    "Application.ExcelDuplicateRemover.executor": "Run",
+    "Application.ExcelToJsonConverter.executor": "Run",
+    "Application.ExcelToJsonSpeciesConverter.executor": "Run",
+    "Application.ExtraElementsFinder.executor": "Run",
+    "Application.FilingReportGenerator.executor": "Run",
+    "Application.FindExtras.executor": "Run",
+    "Application.GetOriginalEmbedUrl.executor": "Run",
+    "Application.JSONFieldDifference.executor": "Run",
+    "Application.JsonMergeUtil.executor": "Run",
+    "Application.JsonMerger.executor": "Run",
+    "Application.JsonToExcelConverter.executor": "Run",
+    "Application.LastFilingDateUpdater.executor": "Run",
+    "Application.LocalSMTPEmailSender.executor": "Run",
+    "Application.LoginWith2FA.executor": "Run",
+    "Application.MergeJsonResults.executor": "Run",
+    "Application.MicrosoftEmailSender.executor": "Run",
+    "Application.PlaywrightWithAppToken.executor": "Run",
+    "Application.RemoveDuplicateRows.executor": "Run",
+    "Application.SendGridEmailSender.executor": "Run",
+    "Application.SimpleEmail.executor": "Run",
+    "Application.SpeciesJsonToExcel.executor": "Run",
+    "Application.TLSEmail.executor": "Run",
+    "Application.UpdateDateFormat.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.BelgiumFilings.belgiumFilings.executor": "Run",
+    "TestNG.BrazilFilings.downloadBrazilFilings.executor": "Run",
+    "TestNG.BrazilFilings.testData.executor": "Run",
+    "TestNG.BulgariaFilings.bulgariaFilings.executor": "Run",
+    "TestNG.C:/Users/HP/IdeaProjects/BMWebAutomation/cornell.xml.executor": "Run",
+    "TestNG.C:/Users/HP/eclipse-workspace/Sanity.xml.executor": "Run",
+    "TestNG.C:/Users/HP/eclipse-workspace/Smoke.xml.executor": "Run",
+    "TestNG.C:/Users/HP/eclipse-workspace/eclipse-workspace/BMWebAutomation/parallel.xml.executor": "Run",
+    "TestNG.C:/Users/HP/eclipse-workspace/eclipse-workspace/BMWebAutomation/preqin.xml.executor": "Run",
+    "TestNG.C:/Users/HP/eclipse-workspace/eclipse-workspace/BMWebAutomation/testNgXmls/generalTestCases.xml.executor": "Run",
+    "TestNG.ColumbiaFilings.columbiaFilings.executor": "Run",
+    "TestNG.CornellLabsTest.convertFamilyToJson.executor": "Run",
+    "TestNG.CornellLabsTest.convertJson.executor": "Run",
+    "TestNG.CornellLabsTest.convertSpeciesFamilyToJson.executor": "Run",
+    "TestNG.CornellLabsTest.convertSpeciesImageUrlToJson.executor": "Run",
+    "TestNG.CornellLabsTest.getFamilyDetails.executor": "Run",
+    "TestNG.CornellLabsTest.getSpeciesData.executor": "Run",
+    "TestNG.CornellLabsTest.getspeciesImgaeUrl.executor": "Run",
+    "TestNG.EstoniaFIlings.estoniaFilings.executor": "Run",
+    "TestNG.EstoniaFilings1.estoniaFilings.executor": "Run",
+    "TestNG.FirstScript.pushDocumentFromE_Repository_Admin_Portal_Test.executor": "Run",
+    "TestNG.GermanyFilings.downloadGermanyFilings.executor": "Run",
+    "TestNG.GermanyFilings.executor": "Run",
+    "TestNG.JsonConverstion.convertJson.executor": "Run",
+    "TestNG.LuxembourgFilings.luxemburgFilings.executor": "Run",
+    "TestNG.NewZealandFilings1.downloadNewZealandFiles.executor": "Run",
+    "TestNG.NewZealandFilings1.executor": "Run",
+    "TestNG.NorwayFilings.downloadNorwayFilings.executor": "Run",
+    "TestNG.NorwayFilings1.downloadNorwayFilings.executor": "Run",
+    "TestNG.PdfConversion.pdfConverter.executor": "Run",
+    "TestNG.PolandFilings.downloadPolandFiles.executor": "Run",
+    "TestNG.PolandFilings1.downloadPolandFiles.executor": "Run",
+    "TestNG.ProjectCloningTest.createProjectUsingBmxTest.executor": "Run",
+    "TestNG.ProjectCloningTest.executor": "Run",
+    "TestNG.SanitySuite.SanityTestSuite.executor": "Run",
+    "TestNG.SanitySuite.executor": "Run",
+    "TestNG.SanitySuiteTest.SanityTestSuite.executor": "Run",
+    "TestNG.SanitySuiteTest.executor": "Run",
+    "TestNG.SherlockBugs.getBugsDetails.executor": "Run",
+    "TestNG.SherlockBugs.logBugs.executor": "Run",
+    "TestNG.SherlockBugs.testAllBugsMap.executor": "Run",
+    "TestNG.SouthKoreaFilings.southKoreaFilings.executor": "Run",
+    "TestNG.StudioPageSmokeTest.ValidateLandingPageTest.executor": "Run",
+    "TestNG.StudioPageSmokeTest.createViewTest.executor": "Run",
+    "TestNG.StudioPageSmokeTest.createWorkFlowTest.executor": "Run",
+    "TestNG.StudioPageSmokeTest.downloadExportReport.executor": "Run",
+    "TestNG.StudioPageSmokeTest.executor": "Run",
+    "TestNG.StudioPageSmokeTest.ingestDocument.executor": "Run",
+    "TestNG.StudioPageSmokeTest.ingestDocumentsFromDocumentPage.executor": "Run",
+    "TestNG.StudioPageSmokeTest.landingPageTest.executor": "Run",
+    "TestNG.StudioPageSmokeTest.studioPageAndHomePageNavigationTest.executor": "Run",
+    "TestNG.StudioPageSmokeTest.verifyAgentCreationTest.executor": "Run",
+    "TestNG.StudioPageTest.apiFetchXFlow.executor": "Run",
+    "TestNG.StudioPageTest.createXFlow.executor": "Run",
+    "TestNG.StudioPageTest.editWorkFlow.executor": "Run",
+    "TestNG.StudioPageTest.executor": "Run",
+    "TestNG.StudioPageTest.validateWorkFlowInformation.executor": "Run",
+    "TestNG.StudioPageTest.validateWorkflowTest.executor": "Run",
+    "TestNG.SwedanFilingsDownload.swedanFilings.executor": "Run",
+    "TestNG.US_FilingsDownloadTest.usFilingsDownloadTest.executor": "Run",
+    "git-widget-placeholder": "Merging thiru/Regression__Test",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="TestNG.ProjectCloningTest">
+    <configuration name="C:/Users/HP/eclipse-workspace/Sanity.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlayWrightFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Sanity.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/HP/eclipse-workspace/Smoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlayWrightFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Smoke.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectCloningTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlayWrightFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smoke_test_cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smoke_test_cases" />
+      <option name="MAIN_CLASS_NAME" value="smoke_test_cases.ProjectCloningTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectCloningTest.createProjectUsingBmxTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlayWrightFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smoke_test_cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smoke_test_cases" />
+      <option name="MAIN_CLASS_NAME" value="smoke_test_cases.ProjectCloningTest" />
+      <option name="METHOD_NAME" value="createProjectUsingBmxTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudioPageSmokeTest.verifyAgentCreationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlayWrightFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="smoke_test_cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="smoke_test_cases" />
+      <option name="MAIN_CLASS_NAME" value="smoke_test_cases.StudioPageSmokeTest" />
+      <option name="METHOD_NAME" value="verifyAgentCreationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ProjectCloningTest" />
+        <item itemvalue="TestNG.ProjectCloningTest.createProjectUsingBmxTest" />
+        <item itemvalue="TestNG.C:/Users/HP/eclipse-workspace/Smoke.xml" />
+        <item itemvalue="TestNG.StudioPageSmokeTest.verifyAgentCreationTest" />
+        <item itemvalue="TestNG.C:/Users/HP/eclipse-workspace/Sanity.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cecd7cc-8660-4ae2-ae77-a47d01bc28aa" name="Changes" comment="" />
+      <created>1744174247583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744174247583</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/EstoniaFIlings.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/EstoniaFIlings.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/EstoniaFIlings.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/EstoniaFIlings.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>289</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>291</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>295</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>296</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>303</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>318</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>320</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/support_scripts/LocalSMTPEmailSender.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/GermanyFilings.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/NorwayFilings.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/playwright/secGovModules/SecGovModules.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/SouthKoreaFilings.java</url>
+          <line>263</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/SouthKoreaFilings.java</url>
+          <line>264</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/SouthKoreaFilings.java</url>
+          <line>265</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>251</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>250</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>241</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>246</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/BrazilFilings.java</url>
+          <line>221</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/preqin_testcases/GermanyFilings.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/playwright/modules/SmokeTestModules.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/playwright/modules/SmokeTestModules.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/playwright/modules/Modules.java</url>
+          <line>1829</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/playwright/modules/RegressionModules.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/playwright/modules/Modules.java</url>
+          <line>2085</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/regression_test_cases/SherlockBugs.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,1 +1,5 @@
-/target/
+screenshots/
+reports/
+failed-screenshots/
+target/
+test-output/

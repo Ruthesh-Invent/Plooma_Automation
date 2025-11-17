@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.dewa.framework.regressiontestcases.DashboardPageTest">
+      <class name="smoke_test_cases.AppointmentPageSmokeTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyDashboardOverallSentimentScore_ChannelWebsiteHappyFilterTest"/>
-          <include name="afterSuite"/>
-          <include name="navigateToProjectFromHome"/>
           <include name="afterMethod"/>
+          <include name="appointmentCreationTest"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- org.dewa.framework.regressiontestcases.DashboardPageTest -->
+      </class> <!-- smoke_test_cases.AppointmentPageSmokeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,24 @@
+{
+	"createWorkFlowTest": [
+		{
+			"subscriptionName": "BOMAutomation",
+			"projectName": "IngestionAutomation",
+			"workFlowData": {
+				"stage1": "Extraction",
+				"stage2": "Lookup Update",
+				"stage3": "Automation Bot",
+				"stage4": "End"
+			}
+		}
+	],
+	"Documents":[
+		{
+			"subscriptionName": "BOMAutomation",
+			 "projectName": "Agent Test"
+		}
+
+	]
+	
+	
+
+}
