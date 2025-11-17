@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-17T22:06:48 IST" name="Default suite" finished-at="2025-11-17T22:08:10 IST" duration-ms="81739">
+  <suite started-at="2025-11-18T00:04:36 IST" name="Default suite" finished-at="2025-11-18T00:05:13 IST" duration-ms="37171">
     <groups>
       <group name="Smoke">
-        <method signature="AppointmentPageSmokeTest.appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@610f7aa]" name="appointmentCreationTest" class="smoke_test_cases.AppointmentPageSmokeTest"/>
+        <method signature="AppointmentPageSmokeTest.appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" name="appointmentCreationTest" class="smoke_test_cases.AppointmentPageSmokeTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-11-17T22:06:48 IST" name="Default test" finished-at="2025-11-17T22:08:10 IST" duration-ms="81739">
+    <test started-at="2025-11-18T00:04:36 IST" name="Default test" finished-at="2025-11-18T00:05:13 IST" duration-ms="37171">
       <class name="smoke_test_cases.AppointmentPageSmokeTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@610f7aa]" started-at="2025-11-17T22:06:48 IST" name="launchApplication" finished-at="2025-11-17T22:07:17 IST" duration-ms="28591" status="FAIL">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T00:04:36 IST" name="launchApplication" finished-at="2025-11-18T00:05:09 IST" duration-ms="33431" status="FAIL">
           <exception class="com.microsoft.playwright.PlaywrightException">
             <message>
               <![CDATA[Error {
   message='net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
   name='Error
   stack='Error: net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
-    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crPage.js:515:35)
-    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:534:28)
+    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crPage.js:515:35)
+    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:534:28)
 }
 Call log:
 - navigating to "http://pmsuatadmin.inventsoftlabs.com/authentication/signin", waiting until "load"
@@ -29,8 +29,8 @@ Call log:
   message='net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
   name='Error
   stack='Error: net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
-    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crPage.js:515:35)
-    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:534:28)
+    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crPage.js:515:35)
+    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:534:28)
 }
 Call log:
 - navigating to "http://pmsuatadmin.inventsoftlabs.com/authentication/signin", waiting until "load"
@@ -46,7 +46,7 @@ at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
 at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:927)
 at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
 at baseFunctions.CommonFunctions.launchApplication(CommonFunctions.java:23)
-at smoke_test_cases.AppointmentPageSmokeTest.launchApplication(AppointmentPageSmokeTest.java:28)
+at smoke_test_cases.AppointmentPageSmokeTest.launchApplication(AppointmentPageSmokeTest.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,8 +77,8 @@ Caused by: com.microsoft.playwright.impl.DriverException: Error {
   message='net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
   name='Error
   stack='Error: net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
-    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crPage.js:515:35)
-    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:534:28)
+    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crPage.js:515:35)
+    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:534:28)
 }
 Call log:
 - navigating to "http://pmsuatadmin.inventsoftlabs.com/authentication/signin", waiting until "load"
@@ -93,15 +93,15 @@ at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@610f7aa]" started-at="2025-11-17T22:07:17 IST" name="appointmentCreationTest" finished-at="2025-11-17T22:07:17 IST" duration-ms="1" status="SKIP">
+        <test-method signature="appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T00:05:09 IST" name="appointmentCreationTest" finished-at="2025-11-18T00:05:09 IST" duration-ms="0" status="SKIP">
           <exception class="com.microsoft.playwright.PlaywrightException">
             <message>
               <![CDATA[Error {
   message='net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
   name='Error
   stack='Error: net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
-    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crPage.js:515:35)
-    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:534:28)
+    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crPage.js:515:35)
+    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:534:28)
 }
 Call log:
 - navigating to "http://pmsuatadmin.inventsoftlabs.com/authentication/signin", waiting until "load"
@@ -112,8 +112,8 @@ Call log:
   message='net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
   name='Error
   stack='Error: net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
-    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crPage.js:515:35)
-    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:534:28)
+    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crPage.js:515:35)
+    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:534:28)
 }
 Call log:
 - navigating to "http://pmsuatadmin.inventsoftlabs.com/authentication/signin", waiting until "load"
@@ -129,7 +129,7 @@ at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
 at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:927)
 at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
 at baseFunctions.CommonFunctions.launchApplication(CommonFunctions.java:23)
-at smoke_test_cases.AppointmentPageSmokeTest.launchApplication(AppointmentPageSmokeTest.java:28)
+at smoke_test_cases.AppointmentPageSmokeTest.launchApplication(AppointmentPageSmokeTest.java:27)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -160,8 +160,8 @@ Caused by: com.microsoft.playwright.impl.DriverException: Error {
   message='net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
   name='Error
   stack='Error: net::ERR_CONNECTION_TIMED_OUT at http://pmsuatadmin.inventsoftlabs.com/authentication/signin
-    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crPage.js:515:35)
-    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:534:28)
+    at FrameSession._navigate (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crPage.js:515:35)
+    at async Frame._gotoAction (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:534:28)
 }
 Call log:
 - navigating to "http://pmsuatadmin.inventsoftlabs.com/authentication/signin", waiting until "load"
@@ -176,18 +176,18 @@ at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appointmentCreationTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@610f7aa]" started-at="2025-11-17T22:07:17 IST" name="afterMethod" finished-at="2025-11-17T22:07:39 IST" duration-ms="21751" status="FAIL">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T00:05:10 IST" name="afterMethod" finished-at="2025-11-18T00:05:13 IST" duration-ms="3075" status="FAIL">
           <exception class="com.microsoft.playwright.PlaywrightException">
             <message>
               <![CDATA[Error {
-  message='net::ERR_CONNECTION_TIMED_OUT
+  message='net::ERR_ABORTED; maybe frame was detached?
   name='Error
-  stack='Error: net::ERR_CONNECTION_TIMED_OUT
-    at FrameManager.frameAbortedNavigation (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:216:14)
-    at FrameManager.requestFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:276:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crNetworkManager.js:511:134)
+  stack='Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:216:14)
+    at FrameManager.requestFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:276:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crNetworkManager.js:511:134)
     at CRSession.emit (node:events:518:28)
-    at C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crConnection.js:160:14
+    at C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crConnection.js:160:14
 }
 Call log:
 - waiting for navigation until "load"
@@ -195,14 +195,14 @@ Call log:
             </message>
             <full-stacktrace>
               <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
-  message='net::ERR_CONNECTION_TIMED_OUT
+  message='net::ERR_ABORTED; maybe frame was detached?
   name='Error
-  stack='Error: net::ERR_CONNECTION_TIMED_OUT
-    at FrameManager.frameAbortedNavigation (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:216:14)
-    at FrameManager.requestFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:276:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crNetworkManager.js:511:134)
+  stack='Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:216:14)
+    at FrameManager.requestFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:276:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crNetworkManager.js:511:134)
     at CRSession.emit (node:events:518:28)
-    at C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crConnection.js:160:14
+    at C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crConnection.js:160:14
 }
 Call log:
 - waiting for navigation until "load"
@@ -252,14 +252,14 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 Caused by: com.microsoft.playwright.impl.DriverException: Error {
-  message='net::ERR_CONNECTION_TIMED_OUT
+  message='net::ERR_ABORTED; maybe frame was detached?
   name='Error
-  stack='Error: net::ERR_CONNECTION_TIMED_OUT
-    at FrameManager.frameAbortedNavigation (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:216:14)
-    at FrameManager.requestFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\frames.js:276:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crNetworkManager.js:511:134)
+  stack='Error: net::ERR_ABORTED; maybe frame was detached?
+    at FrameManager.frameAbortedNavigation (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:216:14)
+    at FrameManager.requestFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\frames.js:276:12)
+    at CRNetworkManager._onLoadingFailed (C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crNetworkManager.js:511:134)
     at CRSession.emit (node:events:518:28)
-    at C:\Users\admin\AppData\Local\Temp\playwright-java-14397512822113069011\package\lib\server\chromium\crConnection.js:160:14
+    at C:\Users\admin\AppData\Local\Temp\playwright-java-7132369101019484135\package\lib\server\chromium\crConnection.js:160:14
 }
 Call log:
 - waiting for navigation until "load"
@@ -274,11 +274,11 @@ at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@610f7aa]" started-at="2025-11-17T22:07:39 IST" name="tearDown" finished-at="2025-11-17T22:08:10 IST" duration-ms="30965" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T00:05:13 IST" name="tearDown" finished-at="2025-11-18T00:05:13 IST" duration-ms="277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@610f7aa]" started-at="2025-11-17T22:08:10 IST" name="afterSuite" finished-at="2025-11-17T22:08:10 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T00:05:14 IST" name="afterSuite" finished-at="2025-11-18T00:05:14 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
