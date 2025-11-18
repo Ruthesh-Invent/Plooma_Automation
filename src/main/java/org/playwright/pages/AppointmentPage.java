@@ -50,12 +50,15 @@ public class AppointmentPage extends BaseClass {
 	    element.click();
 	}
 	
-	public void clickyes() {
-	    String xpath = "//a[contains(text(), 'Yes')]";
-	    Locator element = getPage().locator(xpath);
-	    element.click();
-	}
-	
+//	public void clickYes() {
+//	    Locator yesButton = getPage().locator("//a[normalize-space()='Yes' and contains(@class, 'mat-primary')]");
+//	    yesButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(10000));
+//	    yesButton.click();
+//	    System.out.println("Clicked on 'Yes' button. Waiting for 5 seconds...");
+//	    try { Thread.sleep(5000); } catch (InterruptedException e) { e.printStackTrace(); }
+//	}
+
+
     public int getTotalAppointmentCount() {
 
         Locator pagination = getPage().locator("li.page-item.m-r-5.ng-star-inserted").first();
@@ -64,5 +67,44 @@ public class AppointmentPage extends BaseClass {
         return Integer.parseInt(total);
     }
 
+    public void saveAppointmentHandleAllPopups() {
+        getPage().locator("//span[normalize-space()='Save']").click();
+        System.out.println("Clicked Save button.");
+        sleepSeconds(5); 
+        Locator conflictYesButton = getPage().locator("//a[normalize-space()='Yes' and contains(@class, 'mat-primary')]");
+        Locator beyondOfficeHoursYesButton = getPage().locator(
+                "//div[normalize-space(text())='Warning Alert']//following::a[normalize-space()='Yes' and contains(@class,'mat-primary')][1]");
+        boolean popupHandled;
+        do {
+            popupHandled = false;
+                if (conflictYesButton.isVisible(new Locator.IsVisibleOptions().setTimeout(1000))) {
+                System.out.println("Conflict popup detected. Waiting 5 seconds before clicking 'Yes'...");
+                sleepSeconds(5); 
+                conflictYesButton.click();
+                System.out.println("Clicked Yes on conflict popup.");
+                popupHandled = true;
+                sleepSeconds(5); 
+            }
 
+            if (beyondOfficeHoursYesButton.isVisible(new Locator.IsVisibleOptions().setTimeout(1000))) {
+                System.out.println("Beyond office hours popup detected. Waiting 5 seconds before clicking 'Yes'...");
+                sleepSeconds(5); 
+                beyondOfficeHoursYesButton.click();
+                System.out.println("Clicked Yes on beyond office hours popup.");
+                popupHandled = true;
+                sleepSeconds(5); 
+            }
+
+        } while (popupHandled);
+        sleepSeconds(5);
+        System.out.println("All popups handled. Appointment saved successfully.");
+    }
+    
+    private void sleepSeconds(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

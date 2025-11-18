@@ -18,16 +18,16 @@ public class AppointmentModule extends ParentModule {
 	    	  int beforeCount = getAppointmentPage().getTotalAppointmentCount();
 	          System.out.println("Before count = " + beforeCount);
 	    	getAppointmentPage().clickAddapointment();
-	    	getAppointmentPage().selectDropdownByFieldNameAndValue("Provider", "Sabrina Facundo");
+	    	getAppointmentPage().selectDropdownByFieldNameAndValue("Provider", "Kathryn Rowe");
 	    	getAppointmentPage().selectDropdownByFieldNameAndValue("Patient", "Steve Smith");
 	    	getAppointmentPage().selectDropdownByFieldNameAndValue("Visit Reason", "OT Evaluation");
 	    	getAppointmentPage().selectDropdownByFieldNameAndValue("Service Location", "MLee Therapy");
-	    	getAppointmentPage().clicksave();
-	    	getAppointmentPage().clickyes();
+	    	getAppointmentPage().saveAppointmentHandleAllPopups();
+	    	//getAppointmentPage().clickYes();
 	    	  int afterCount = getAppointmentPage().getTotalAppointmentCount();
 	          System.out.println("After count = " + afterCount);
 	          Assert.assertTrue(afterCount > beforeCount,
-	                  "❌ Appointment was NOT added! Count did NOT increase.");
-	          System.out.println("✅ Appointment creation validated by count increase.");
+	                  "Appointment was NOT added! Count did NOT increase.");
+	          System.out.println("Appointment creation validated by count increase.");
 	      }
 	  }
