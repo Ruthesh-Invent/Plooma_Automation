@@ -5,8 +5,8 @@
     <classes>
       <class name="smoke_test_cases.AppointmentPageSmokeTest">
         <methods>
+          <include name="appointmentCheckoutTest" invocation-numbers="0"/>
           <include name="afterMethod"/>
-          <include name="appointmentCreationTest"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
           <include name="afterSuite"/>

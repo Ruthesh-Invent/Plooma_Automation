@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-18T18:52:39 IST" name="Default suite" finished-at="2025-11-18T18:54:26 IST" duration-ms="107580">
+  <suite started-at="2025-11-26T21:25:38 IST" name="Default suite" finished-at="2025-11-26T21:27:33 IST" duration-ms="115299">
     <groups>
       <group name="Smoke">
-        <method signature="AppointmentPageSmokeTest.appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" name="appointmentCreationTest" class="smoke_test_cases.AppointmentPageSmokeTest"/>
+        <method signature="AppointmentPageSmokeTest.appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@57250572]" name="appointmentCreationTest" class="smoke_test_cases.AppointmentPageSmokeTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-11-18T18:52:39 IST" name="Default test" finished-at="2025-11-18T18:54:26 IST" duration-ms="107580">
+    <test started-at="2025-11-26T21:25:38 IST" name="Default test" finished-at="2025-11-26T21:27:33 IST" duration-ms="115299">
       <class name="smoke_test_cases.AppointmentPageSmokeTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T18:52:39 IST" name="launchApplication" finished-at="2025-11-18T18:52:57 IST" duration-ms="18525" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@57250572]" started-at="2025-11-26T21:25:38 IST" name="launchApplication" finished-at="2025-11-26T21:26:02 IST" duration-ms="24097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T18:52:57 IST" name="appointmentCreationTest" finished-at="2025-11-18T18:54:12 IST" duration-ms="74926" status="PASS">
+        <test-method signature="appointmentCreationTest()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@57250572]" started-at="2025-11-26T21:26:02 IST" name="appointmentCreationTest" finished-at="2025-11-26T21:27:17 IST" duration-ms="74710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appointmentCreationTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T18:54:12 IST" name="afterMethod" finished-at="2025-11-18T18:54:14 IST" duration-ms="1785" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@57250572]" started-at="2025-11-26T21:27:17 IST" name="afterMethod" finished-at="2025-11-26T21:27:22 IST" duration-ms="5736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T18:54:14 IST" name="tearDown" finished-at="2025-11-18T18:54:26 IST" duration-ms="12289" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@57250572]" started-at="2025-11-26T21:27:22 IST" name="tearDown" finished-at="2025-11-26T21:27:33 IST" duration-ms="10699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@3098cf3b]" started-at="2025-11-18T18:54:27 IST" name="afterSuite" finished-at="2025-11-18T18:54:27 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:smoke_test_cases.AppointmentPageSmokeTest@57250572]" started-at="2025-11-26T21:27:33 IST" name="afterSuite" finished-at="2025-11-26T21:27:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

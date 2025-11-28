@@ -1,24 +1,20 @@
 {
-	"createWorkFlowTest": [
-		{
-			"subscriptionName": "BOMAutomation",
-			"projectName": "IngestionAutomation",
-			"workFlowData": {
-				"stage1": "Extraction",
-				"stage2": "Lookup Update",
-				"stage3": "Automation Bot",
-				"stage4": "End"
-			}
-		}
-	],
-	"Documents":[
-		{
-			"subscriptionName": "BOMAutomation",
-			 "projectName": "Agent Test"
-		}
-
-	]
-	
-	
-
+  "appointmentCheckoutTest": [
+    {
+      "patientName": "Paisley Wolf",
+      "Subjective": "Test subject",
+      "Assesment": "Test Assessment",
+      "Diagnosis code": "R47.9"
+    }
+  ],
+  "scheduleTileTest": [
+    {
+      "patientName": "Paisley Wolf"
+    }
+  ],
+  "scheduleTileTest": [
+     {
+       "patientName": "Paisley Wolf"
+     }
+	 ]
 }

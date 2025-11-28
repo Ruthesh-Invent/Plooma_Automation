@@ -561,5 +561,14 @@ public class UtilityClass extends ListenerImplimentation {
 			System.out.println("Rename failed.");
 		}
 	}
+	
+	public static void waitForLoadingToFinish() {
+	    Locator loadingAnimation = getPage().locator("//div[contains(@class,'ball-scale-pulse')]");
+	    // Wait for the loading animation to disappear (hidden or detached)
+	    loadingAnimation.waitFor(new Locator.WaitForOptions()
+	        .setState(WaitForSelectorState.HIDDEN)
+	        .setTimeout(60000)); // adjust timeout as needed
+	}
+
 }
 

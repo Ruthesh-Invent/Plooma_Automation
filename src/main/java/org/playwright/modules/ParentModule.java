@@ -12,16 +12,23 @@ import com.microsoft.playwright.Page;
 public class ParentModule extends UtilityClass {
 
 	private static ThreadLocal<AppointmentPage> appointmentPage = new ThreadLocal<>();
+	private static ThreadLocal<DashboardPage> dashboardPage = new ThreadLocal<>();
 	
 	public static AppointmentPage getAppointmentPage() {
         return appointmentPage.get();
+    }
+	
+	public static DashboardPage getDashboardPage() {
+        return dashboardPage.get();
     }
     
 	Map<String, Object> data;
 
 	public ParentModule(Map<String, Object> data, Page page) {
-		
+		 
+		dashboardPage.set(new DashboardPage(page));
 		appointmentPage.set(new AppointmentPage(page));	
+		
 		this.data = data;
 	}
 	
