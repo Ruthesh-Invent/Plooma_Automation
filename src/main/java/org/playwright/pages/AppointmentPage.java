@@ -13,25 +13,26 @@ public class AppointmentPage extends BaseClass {
 		super(page);
 	}
 
-	public void clickMainModule(String moduleName) {
-	    String xpath = "//span[normalize-space()='" + moduleName + "']/parent::a";
-	    Locator moduleElement = getPage().locator(xpath);
-	    click(moduleElement, moduleName);
-	}
-	
-	public void clickSubmodule(String subModuleName){
-		
-		String xpath = "//a[normalize-space(text())='" + subModuleName + "']";
-		Locator submoduleElement = getPage().locator(xpath);
-		click(submoduleElement, subModuleName);	
-		 System.out.println("Clicked on the subModuleName ");
-	}
+//	public void clickMainModule(String moduleName) {
+//	    String xpath = "//span[normalize-space()='" + moduleName + "']/parent::a";
+//	    Locator moduleElement = getPage().locator(xpath);
+//	    click(moduleElement, moduleName);
+//	}
+//	
+//	public void clickSubmodule(String subModuleName){
+//		
+//		String xpath = "//a[normalize-space(text())='" + subModuleName + "']";
+//		Locator submoduleElement = getPage().locator(xpath);
+//		click(submoduleElement, subModuleName);	
+//		 System.out.println("Clicked on the subModuleName ");
+//	}
 	
 	public void clickAddapointment() {
 	    String xpath = "//mat-icon[normalize-space()='add']";
 	    Locator element = getPage().locator(xpath);
 	    element.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
 	    element.click();
+	    extentTest.get().log(Status.INFO, "Clicked on 'Add Appointment' icon.");
 	    System.out.println("Clicked the add icon");
 	}
 	
@@ -59,13 +60,24 @@ public class AppointmentPage extends BaseClass {
 //	}
 
 
-    public int getTotalAppointmentCount() {
+    public int getTotalAppointmentCount1() {
 
         Locator pagination = getPage().locator("li.page-item.m-r-5.ng-star-inserted").first();
         String text = pagination.textContent().trim();  
         String total = text.split("of")[1].trim();
         return Integer.parseInt(total);
+        
     }
+    public int getTotalAppointmentCount() {
+
+        Locator pagination = getPage().locator("li.page-item.m-r-5.ng-star-inserted").first();
+        String text = pagination.textContent().trim();  
+        String total = text.split("of")[1].trim();
+        int count = Integer.parseInt(total);
+        extentTest.get().log(Status.INFO, "Total appointment count retrieved: '" + count + "'");
+        return count;
+    }
+
 
     public void saveAppointmentHandleAllPopups() {
         getPage().locator("//span[normalize-space()='Save']").click();
@@ -97,8 +109,16 @@ public class AppointmentPage extends BaseClass {
 
         } while (popupHandled);
         sleepSeconds(5);
+        extentTest.get().log(Status.INFO, "All popups handled. Appointment saved successfully.");
         System.out.println("All popups handled. Appointment saved successfully.");
     }
+    
+    public void navigateToDashboard() {
+	    Locator icon = getPage().locator("//i[contains(@class,'fa-home')]");
+	    icon.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+	    icon.click();
+	    extentTest.get().log(Status.INFO, "Clicked on daashord -> Navigated sucessfully.");
+	}
     
     private void sleepSeconds(int seconds) {
         try {
@@ -106,5 +126,7 @@ public class AppointmentPage extends BaseClass {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        
+        
     }
 }

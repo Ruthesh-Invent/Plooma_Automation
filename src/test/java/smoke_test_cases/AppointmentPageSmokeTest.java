@@ -33,4 +33,22 @@ public class AppointmentPageSmokeTest extends CommonFunctions {
 	    AppointmentModule appointment = new AppointmentModule(null, getPage());
 	    appointment.appointmentcreation();
 	}
+	
+
+	@Test(enabled = true,groups = "Smoke",dataProviderClass = DataProviderClasses.class, dataProvider = "getSmokeTestCasesData",retryAnalyzer = RetryListener.class)
+	    public void appointmentCheckoutTest(Map<String, Object> testData) {
+	    AppointmentModule appointment = new AppointmentModule(testData, getPage());
+	    appointment.appointmentcheckout();
+	}
+	
+	@Test(enabled = true,groups = "Sanity",dataProviderClass = DataProviderClasses.class, dataProvider = "getSmokeTestCasesData",retryAnalyzer = RetryListener.class)
+    public void scheduleTileTest(Map<String, Object> testData) {
+    AppointmentModule schedule = new AppointmentModule(testData, getPage());
+    schedule.validateSchedule();
+}
+	@Test(enabled = true,groups = "Sanity",dataProviderClass = DataProviderClasses.class, dataProvider = "getSmokeTestCasesData",retryAnalyzer = RetryListener.class)
+    public void checkedInTileTest(Map<String, Object> testData) {
+    AppointmentModule checkedin = new AppointmentModule(testData, getPage());
+    checkedin.validatecheckedin();
+}
 }
