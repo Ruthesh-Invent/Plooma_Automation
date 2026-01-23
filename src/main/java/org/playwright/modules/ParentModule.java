@@ -5,6 +5,7 @@ import java.util.Map;
 import org.framework.playwright.utils.UtilityClass;
 import org.playwright.pages.AppointmentPage;
 import org.playwright.pages.EncounterPage;
+import org.playwright.pages.Patientlistpage;
 import org.playwright.smoketestpages.DashboardPage;
 
 import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
@@ -15,6 +16,7 @@ public class ParentModule extends UtilityClass {
 	private static ThreadLocal<AppointmentPage> appointmentPage = new ThreadLocal<>();
 	private static ThreadLocal<DashboardPage> dashboardPage = new ThreadLocal<>();
     private static final ThreadLocal<EncounterPage> encounterPage = new ThreadLocal<>();
+    private static final ThreadLocal<Patientlistpage> patientlistpage = new ThreadLocal<>();
 
 
 	public static AppointmentPage getAppointmentPage() {
@@ -28,6 +30,9 @@ public class ParentModule extends UtilityClass {
 	 public static EncounterPage getEncounterPage() {
 	        return encounterPage.get();
 	    }
+	 public static Patientlistpage getPatientlistpage() {
+		 return patientlistpage.get();
+	 }
 	 
 
 	Map<String, Object> data;
@@ -37,6 +42,7 @@ public class ParentModule extends UtilityClass {
 		dashboardPage.set(new DashboardPage(page));
 		appointmentPage.set(new AppointmentPage(page));
 		encounterPage.set(new EncounterPage(page));
+		patientlistpage.set(new Patientlistpage(page));
 		this.data = data;
 	}
 

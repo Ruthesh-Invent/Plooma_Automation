@@ -17,7 +17,7 @@ public class Ecountermodule extends ParentModule {
 	}
   
   
-    public void validateencounterform() {
+    public void validateencounterform1() {
     	Map<String, Object> projectInfo = new HashMap<String, Object>();
     	String name = data.get("patientName").toString();
     	getDashboardPage().clickMainModule("Billing");
@@ -38,4 +38,16 @@ public class Ecountermodule extends ParentModule {
 		getEncounterPage().Approveencounter();
 	}
 
+    
+    public void validateencounterform() {
+    	Map<String, Object> projectInfo = new HashMap<String, Object>();
+    	String name = data.get("patientName").toString();
+    	getDashboardPage().clickMainModule("Billing");
+    	getDashboardPage().clickSubmodule("Encounter Form");
+    	int initialCount =getDashboardPage().getTileCount("Pending");
+    	getEncounterPage().markinprgcounter();
+    	getEncounterPage().markinprogress();
+    	getEncounterPage().getencounternum();
+    	
 	}
+}

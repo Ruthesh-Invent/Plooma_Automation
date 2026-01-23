@@ -17,44 +17,68 @@ public class AppointmentModule extends ParentModule {
 	public AppointmentModule(Map<String, Object> data, Page page) {
 		super(data, page);
 	}
-
-	public void appointmentcreation() {
-		getDashboardPage().clickMainModule("Appointments");
-		getDashboardPage().clickSubmodule("Appointments List");
-		int beforeCount = getAppointmentPage().getTotalAppointmentCount();
-		System.out.println("Before count = " + beforeCount);
-		getAppointmentPage().clickAddapointment();
-		getAppointmentPage().selectDropdownByFieldNameAndValue("Provider", "Kathryn Rowe");
-		getAppointmentPage().selectDropdownByFieldNameAndValue("Patient", "Paisley Wolf");
-		getAppointmentPage().selectDropdownByFieldNameAndValue("Visit Reason", "OT Evaluation");
-		getAppointmentPage().selectDropdownByFieldNameAndValue("Service Location", "MLee Therapy");
-		getAppointmentPage().saveAppointmentHandleAllPopups();
-		int afterCount = getAppointmentPage().getTotalAppointmentCount();
-		System.out.println("After count = " + afterCount);
-		Assert.assertTrue(afterCount > beforeCount, "Appointment was NOT added! Count did NOT increase.");
-		System.out.println("Appointment creation validated by count increase.");
-		if (afterCount > beforeCount) {
-			extentTest.get().log(Status.PASS,
-					"Appointment added successfully. Count increased from " + beforeCount + " to " + afterCount);
-		} else {
-			extentTest.get().log(Status.FAIL, "Appointment was NOT added! Count did NOT increase. Before: "
-					+ beforeCount + ", After: " + afterCount);
-		}
-		getAppointmentPage().navigateToDashboard();
+	
+	private String getValue(Map<String, Object> data, String key) {
+	    return data.getOrDefault(key, "").toString();
 	}
 
-	public void appointmentcheckout() {
+	
+	public void appointmentcreation(Map<String, Object> data) {
+
+	    getDashboardPage().clickMainModule("Appointments");
+	    getDashboardPage().clickSubmodule("Appointments List");
+
+	    int beforeCount = getAppointmentPage().getTotalAppointmentCount();
+	    System.out.println("Before count = " + beforeCount);
+
+	    getAppointmentPage().clickAddapointment();
+
+	    getAppointmentPage().selectDropdownByFieldNameAndValue("Provider", data.get("provider").toString());
+
+	    getAppointmentPage().selectDropdownByFieldNameAndValue(
+	            "Patient", data.get("patient").toString());
+
+	    getAppointmentPage().selectDropdownByFieldNameAndValue(
+	            "Visit Reason", data.get("visitReason").toString());
+
+	    getAppointmentPage().selectDropdownByFieldNameAndValue(
+	            "Service Location", data.get("serviceLocation").toString());
+
+	    getAppointmentPage().saveAppointmentHandleAllPopups();
+
+	    int afterCount = getAppointmentPage().getTotalAppointmentCount();
+	    Assert.assertTrue(afterCount > beforeCount,
+	            "Appointment was NOT added! Count did NOT increase.");
+
+	    extentTest.get().log(Status.PASS,
+	            "Appointment created successfully from JSON data");
+
+	    getAppointmentPage().navigateToDashboard();
+	}
+
+
+	public void appointmentcheckout(Map<String, Object> data) {
 
 		Map<String, Object> projectInfo = new HashMap<String, Object>();
-		String Subjectvalue = data.get("Subjective").toString();
-		String Assesmentvalue = data.get("Assesment").toString();
-		String name = data.get("patientName").toString();
-//	        	String Diagnosiscodevalue = data.get("Diagnosis code").toString();
-//	        	appointmentcreation();
-//	        	getAppointmentPage().navigateToDashboard();
-		validateSchedule();
+		String pocTemplate = getValue(data, "pocTemplate");
+		String renderingProvider = getValue(data, "renderingProvider");
+		String diagnosisCode = getValue(data, "diagnosisCode");
+		String procedureCode = getValue(data, "procedureCode");
+		
+		String subjectValue = data.get("subjective").toString();
+		String assessmentValue = data.get("assessment").toString();
+		String patientName = data.get("patientName").toString();
+		appointmentcreation(data);
+		getDashboardPage().navigateToTile("Scheduled");
+		int initialCount = getDashboardPage().getTileCount("Scheduled");
+		getDashboardPage().searchPatientNameAndClickEdit(patientName);
+		getDashboardPage().changestatus("statusType", "Checked In");
+		waitForLoadingToFinish();
+		int updatedCount = getDashboardPage().getTileCount("Scheduled");
+		Assert.assertEquals(updatedCount, initialCount - 1,
+				"Scheduled tile count did not decrease as expected after status change.");		
 		getDashboardPage().navigateToTile("Checked In");
-		getDashboardPage().searchPatientNameAndClicknote(name);
+		getDashboardPage().searchPatientNameAndClicknote(patientName);
 
 		// wait for navigation
 		getPage().waitForLoadState();
@@ -70,8 +94,7 @@ public class AppointmentModule extends ParentModule {
 				"URL validation failed. Expected URL path: " + expectedPath + " but got: " + actualUrl);
 
 		System.out.println("URL validation passed → Redirected to: " + actualUrl + " (Clinical Notes)");
-
-		getDashboardPage().selectpoctype("Template Name", "Test_POC");
+		getDashboardPage().selectpoctype("Template Name", pocTemplate);
 		getDashboardPage().selectgoalandobj();
 		getDashboardPage().clicksavetocontinue();
 		getPage().waitForLoadState();
@@ -84,8 +107,8 @@ public class AppointmentModule extends ParentModule {
 
 		System.out.println("URL validation passed → Redirected to: " + actUrl + " (Clinical Notes)");
 		getPage().waitForLoadState();
-		getDashboardPage().enterFieldValue("Subjective", Subjectvalue);
-		getDashboardPage().enterFieldValue("Assessment", Assesmentvalue);
+		getDashboardPage().enterFieldValue("Subjective", subjectValue);
+		getDashboardPage().enterFieldValue("Assessment", assessmentValue);
 		getDashboardPage().clicksignandcontinue();
 		getPage().waitForURL(url -> url.contains("superbill"),
 				new WaitForURLOptions().setTimeout(60000).setWaitUntil(WaitUntilState.LOAD));
@@ -95,10 +118,19 @@ public class AppointmentModule extends ParentModule {
 				"URL validation failed. Expected URL path: " + expected + " but got: " + actual);
 
 		System.out.println("URL validation passed → Redirected to: " + expected + " (superbill)");
-		getAppointmentPage().selectDropdownByFieldNameAndValue("Rendering Provider", "David J");
-		getDashboardPage().selectICDcode("Diagnosis Codes", "R47.9 - Unspecified speech disturbances");
-		getDashboardPage().selectICDcode("Procedure Codes",
-				"92507 - Treatment of speech, language, voice, communication, and/or auditory processing disorder; individual");
+		getAppointmentPage().selectDropdownByFieldNameAndValue(
+		        "Rendering Provider", renderingProvider);
+
+		getDashboardPage().selectICDcode(
+		        "Diagnosis Codes", diagnosisCode);
+
+		getDashboardPage().selectICDcode(
+		        "Procedure Codes", procedureCode);
+		
+//		getAppointmentPage().selectDropdownByFieldNameAndValue("Rendering Provider", "David J");
+//		getDashboardPage().selectICDcode("Diagnosis Codes", "R47.9 - Unspecified speech disturbances");
+//		getDashboardPage().selectICDcode("Procedure Codes",
+//				"92507 - Treatment of speech, language, voice, communication, and/or auditory processing disorder; individual");
 		getDashboardPage().clicksumbit();
 		getPage().waitForLoadState();
 		getPage().waitForURL(url -> url.contains("/dashboard/main"),
@@ -111,10 +143,10 @@ public class AppointmentModule extends ParentModule {
 //		            System.out.println("URL validation passed → Redirected to: " + Url + " (dashboard/main)");
 	}
 
-	public void validateSchedule() {
+	public void validateSchedule(Map<String, Object> data) {
 		Map<String, Object> projectInfo = new HashMap<String, Object>();
 		String Name = data.get("patientName").toString();
-		appointmentcreation();
+		appointmentcreation(data);
 		getDashboardPage().navigateToTile("Scheduled");
 		int initialCount = getDashboardPage().getTileCount("Scheduled");
 		getDashboardPage().searchPatientNameAndClickEdit(Name);
@@ -125,9 +157,9 @@ public class AppointmentModule extends ParentModule {
 				"Scheduled tile count did not decrease as expected after status change.");
 	}
 
-	public void validatecheckedin() {
+	public void validatecheckedin(Map<String, Object> data) {
 		String name = data.get("patientName").toString();
-		validateSchedule();
+		validateSchedule(data);
 		getDashboardPage().navigateToTile("Checked In");
 		getDashboardPage().searchPatientNameAndClicknote(name);
 		getPage().waitForLoadState();
@@ -143,11 +175,11 @@ public class AppointmentModule extends ParentModule {
 		System.out.println("URL validation passed → Redirected to: " + actualUrl + " (Clinical Notes)");
 	}
 
-	public void validateAppointmentPOC() {
+	public void validateAppointmentPOC(Map<String, Object> data) {
 		Map<String, Object> projectInfo = new HashMap<String, Object>();
 		String Name = data.get("patientName").toString();
-		validateSchedule();
-		validatecheckedin();
+		validateSchedule(data);
+		validatecheckedin(data);
 //		            getDashboardPage().selectappointmentpocdropdown("Others", "Occupational Therapy");
 		getDashboardPage().selectpoctype("Template Name", "Test_POC");
 		getDashboardPage().selectgoalandobj();
@@ -163,10 +195,10 @@ public class AppointmentModule extends ParentModule {
 		System.out.println("URL validation passed → Redirected to: " + actualUrl + " (Clinical Notes)");
 	}
 
-	public void validateclinicalnotes() {
+	public void validateclinicalnotes(Map<String, Object> data) {
 		String Subjectvalue = data.get("Subjective").toString();
 		String Assesmentvalue = data.get("Assesment").toString();
-		validateAppointmentPOC();
+		validateAppointmentPOC(data);
 		getDashboardPage().enterFieldValue("Subjective", Subjectvalue);
 		getDashboardPage().enterFieldValue("Assessment", Assesmentvalue);
 		getDashboardPage().clicksignandcontinue();
@@ -181,8 +213,8 @@ public class AppointmentModule extends ParentModule {
 
 	}
 
-	public void validatesuperbill() {
-		validateclinicalnotes();
+	public void validatesuperbill(Map<String, Object> data) {
+		validateclinicalnotes(data);
 		getAppointmentPage().selectDropdownByFieldNameAndValue("Rendering Provider", "David J");
 		getDashboardPage().selectICDcode("Diagnosis Codes", "R47.9 - Unspecified speech disturbances");
 		getDashboardPage().selectICDcode("Procedure Codes",

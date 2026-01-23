@@ -6,6 +6,7 @@ import org.framework.playwright.utils.BaseClass;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
+import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
@@ -105,10 +106,40 @@ public class EncounterPage extends BaseClass {
 		 Aprbtn.click();
 	 }
 	 
-	 public void getencounternum() {
-		 Locator encounterText = getPage().locator("//b[contains(text(),'Encounter Form')]");
-		 String fullText = encounterText.textContent().trim();
-		 String encounterFormNumber = fullText.replaceAll("\\D+", "");
-		 System.out.println("Encounter Form Number: " + encounterFormNumber);
+	 public String getencounternum() {
+
+		    Locator encounterText = getPage()
+		            .locator("//b[contains(text(),'Encounter Form')]")
+		            .first();
+
+		    // Wait until element is visible
+		    encounterText.waitFor(
+		            new Locator.WaitForOptions()
+		                    .setState(WaitForSelectorState.VISIBLE)
+		    );
+
+		    // Poll until number appears (Angular-safe)
+		    String fullText = "";
+		    for (int i = 0; i < 10; i++) {
+		        fullText = encounterText.textContent();
+
+		        if (fullText != null && fullText.matches(".*\\d+.*")) {
+		            break;
+		        }
+		        getPage().waitForTimeout(500);
+		    }
+
+		    String encounterFormNumber = fullText.replaceAll("\\D+", "");
+
+		    System.out.println("Encounter Form Number: " + encounterFormNumber);
+		    return encounterFormNumber;
+		  
+		}
+
+
+	 
+	 public void markinprgcounter() {	 
+		 Locator assignBtn = getPage().locator("//button[@mattooltip='Assign']/span//mat-icon[@aria-label='Assign']").first();
+		 assignBtn.click();		
 	 }
 }
